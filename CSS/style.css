@@ -97,6 +97,7 @@ a, a:hover, a:focus, a:active {
     transition: height 200ms;
 }
 .dropdowns{
+    position: relative;
     width: 19rem;
     height: 60px !important;
     display: flex;
@@ -419,12 +420,15 @@ a, a:hover, a:focus, a:active {
 }
 
 /* dropdown*/
+.b{
+    display: flex;
+}
 .category-expand{
     width: 1000px;
     position: absolute;
     display: none;
     height: 490px;
-    z-index: 20;
+    z-index: 200;
     background: #fff;
     top: 60px;
     padding: 20px;
@@ -435,6 +439,7 @@ a, a:hover, a:focus, a:active {
     0 0 6px 0 rgb(0 0 0 / 12%);
 }
 .sub-category{
+    border: 1px solid red;
     width: 20%;
     height: auto;
     display: flex;
@@ -474,6 +479,7 @@ a, a:hover, a:focus, a:active {
     transform: rotate(275deg);
 }
 .sub-category-option{
+    border: 1px solid green;
     width: 80%;
     height: 490px;
     display: flex;
@@ -485,7 +491,6 @@ a, a:hover, a:focus, a:active {
 .sub-category-option-value{
     width: 25%;
     height: auto;
-
     font-size: 14px;
     line-height: 30px;
     color: #8d8d8d;

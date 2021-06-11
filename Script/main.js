@@ -77,19 +77,31 @@ window.addEventListener('scroll',function(){
 
     //category dropdown
 
-    var subCategoryValue = document.querySelectorAll('.sub-category-value');
-    var arrow = document.querySelectorAll('.arrow');
+    var subCategoryOption = document.querySelectorAll('.sub-category-option');
+    var arrow = document.querySelectorAll('.arrow'); 
     var section = document.querySelectorAll('section');
     var categoryExpand = document.querySelector('.category-expand');
+    var categoryExpandb = document.querySelector('.b');
     function show(a){
         categoryExpand.style.display = 'flex';
-        arrow[a].classList.add('arrow-icon')
-        section[a].classList.add('show')
-        // subCategoryValue[a].style.color = 'red'
-}
+        arrow[+a].classList.add('arrow-icon')
+        section[+a].classList.add('show')
+        section[+a].classList.add('show`')
+    }
     function hide(a){
-        // subCategoryValue[a] = '#8d8d8d'
-      categoryExpand.style.display = 'none'
-      arrow[a].classList.remove('arrow-icon')
-      section[a].classList.remove('show')
+        categoryExpand.style.display = 'none'
+        arrow[+a].classList.remove('arrow-icon')
+        section[+a].classList.remove('show')
+    }
+    function showb(a){     
+        console.log( Number(a));
+        categoryExpandb.style.display = 'flex';
+        arrow[+a].classList.add('arrow-icon')
+        section[+a].classList.add('show')       
+    }
+    function hideb(a){
+    categoryExpandb.style.display = 'none';
+    arrow[+a].classList.remove('arrow-icon')
+    section[+a].classList.remove('show')
 }
+
