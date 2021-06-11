@@ -1,5 +1,51 @@
 
-// navbar starts
+const responsive = {
+    0: {
+        items: 1
+    },
+    320: {
+        items: 1
+    },
+    560: {
+        items: 2
+    },
+    960: {
+        items: 3
+    }
+}
+$(document).ready(function(){
+    $('#owl-one').owlCarousel({
+        loop: true,
+        autoplay: false,
+        autoplayTimeout: 2000,
+        dots: false,
+        nav: true,
+        navText: [$('.first .owl-nav-prev'), $('.first .owl-nav-next')],
+        responsive: {
+            0:{
+              items: 1
+            },
+            480:{
+              items: 3
+            },
+            769:{
+              items: 4
+            }
+        }
+            
+    });
+
+    $('#owl-two').owlCarousel({
+        loop: true,
+        autoplay: false,
+        autoplayTimeout: 2000,
+        dots: false,
+        nav: true,
+        navText: [$('.second .owl-nav-prev'), $('.second .owl-nav-next')],
+        responsive: responsive
+    });
+});
+
 window.addEventListener('scroll',function(){
     var navbar = document.querySelector(".header");
     var upNav = document.querySelector(".up-nav");
@@ -47,4 +93,3 @@ window.addEventListener('scroll',function(){
       arrow[a].classList.remove('arrow-icon')
       section[a].classList.remove('show')
 }
-// navbar ends

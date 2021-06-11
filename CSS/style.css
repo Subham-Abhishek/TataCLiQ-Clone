@@ -104,7 +104,7 @@ a, a:hover, a:focus, a:active {
     height: 100%;
     align-items: center;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     font-family: 'Rubrik' bold;
 }
 .dropdowns .category{
@@ -124,6 +124,7 @@ a, a:hover, a:focus, a:active {
     background-image: url(https://www.tatacliq.com/src/general/components/img/down-arrow.288db0f16207.svg);
     transform: rotate(180deg);
     transition: 300ms;
+    margin-left: 0.313rem;
 }
 .dropdowns .brands{
     width: 34%;
@@ -131,13 +132,13 @@ a, a:hover, a:focus, a:active {
     display: flex;
     padding: 0 8px 0 10px;
     justify-content: space-around;
-
+    margin-left: 4%;
     align-items: center;
 }
 .category .img{
     width: 13%;
     height: 12px;
-    margin-left: 2px;
+    margin-left: 0.313rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 13px 13px;
@@ -170,7 +171,7 @@ a, a:hover, a:focus, a:active {
     transition: 300ms;
 }
 .search-cart-page{
-    width: 65%;
+    width: 68%;
     height: 60px;
     display: flex;
     margin-right: 80px;
@@ -181,6 +182,7 @@ a, a:hover, a:focus, a:active {
     display: flex;
     padding-left: 5px;
     width: 32%;
+    margin-right: 20px;
     transition: all 300ms linear;
 }
 .search input{
@@ -210,7 +212,7 @@ a, a:hover, a:focus, a:active {
     background-color: white;
     background-image: url(https://image.flaticon.com/icons/png/128/2723/2723639.png);
     background-size: 16px 16px;
-    left: 37.5rem;
+    left: 36rem;
     cursor: pointer;
     transition: all 200ms;
     opacity: 0;
@@ -236,6 +238,7 @@ a, a:hover, a:focus, a:active {
     color: rgb(126,126,126);
     padding: 1px 2px;
     opacity: 1;
+    font-weight: 300;
     transition: all 200ms linear;
 }
 .search-icon{
@@ -252,8 +255,158 @@ a, a:hover, a:focus, a:active {
     width: 91px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 /* nav ends*/
+.carousel{
+    width: 100%;
+  cursor: pointer;
+}
+.carousel-control-prev{
+    width: 66px;
+    height: 66px;
+    top: 40%;
+    left: 20px;
+    opacity: .5;
+    border-radius: 50%;
+    background-color: rgb(216, 216, 216)
+}
+.carousel-control-prev-icon{
+   transform: rotate(180deg);
+   background-image:url(https://www.tatacliq.com/src/general/components/img/arrow.728e31d0944a.svg);
+}
+.carousel-control-next{
+    width: 66px;
+    height: 66px;
+    top: 40%;
+    right: 20px;
+    opacity: .5;
+    border-radius: 50%;
+    background-color: rgb(216, 216, 216)
+}
+.carousel-control-next-icon{
+    background-image:url(https://www.tatacliq.com/src/general/components/img/arrow.728e31d0944a.svg);
+}
+
+.yesBankBanner{
+    width: 100%;
+    height: 12vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3.5%;
+}
+.yesBankBanner img{
+    width: 100%;
+    height: 100%;
+}
+.banner{
+    width: 90%;
+    margin: auto;
+    margin-top:  1%;
+    margin-bottom: 4.5%;
+}
+.banner img{
+    width: 100%;
+}
+.home{
+    margin-top: 1%;
+    margin-bottom: 4.5%;
+}
+.banner > a > img{
+    width: 100%;
+}
+.new-on-click{
+    width: 75%;
+    height: 28vw;
+    margin: auto;
+    padding: 5px 10px;
+}
+.new-on-click img{
+    width: 100%;
+    border-radius: 5px;
+}
+/*cloth brands style starts */
+.brands-section{
+    width: 75%;
+    height: 25.5vw;
+    display: flex;
+    margin: auto;
+    margin-bottom: 4.6vw;
+}
+.brands-section > div{
+    width: 25%;
+    height: 100%;
+    padding: 5px 10px;
+}
+.brand-card > a >img {
+    width: 100%;
+    border-radius: 5px;
+}
+/*cloth brands style end */
+/* rotating banner carousel*/
+.slide{
+    height: 27.5vw;
+    /* border: 1px solid;   */
+ }
+.owl-carousel{
+   width: 74.5%;
+   margin: auto;
+   height: 40vw;
+   pad: 5px;
+}
+.owl-carousel .item{
+    width: 100%;
+    padding: 5px 10px;
+    height: 24.3vw;
+    
+}
+
+.item > img{
+    width: 100%;
+    height: 100%;
+}
+.owl-nav{
+    width: 8.5%;
+    height: 6vw;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: -7vw;
+    right: 3.5%;
+}
+.owl-nav-prev{
+    width: 48%;
+    height: 3vw;
+    position: absolute;
+    cursor: pointer;
+    background-color: rgb(255,255,255);
+    border-radius:  20px 0 0 20px;
+    display: flex;
+    justify-content: center;
+}
+.owl-nav-next{
+    position: absolute;
+    width: 48%;
+    height: 3vw;
+    cursor: pointer;
+    background-color:rgb(255,255,255);
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.owl-nav-prev img{
+    transform: rotate(180deg);
+    width: 20px;
+}
+.owl-nav-next img{
+    width: 20px;
+}
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
     .logo.reduce{
@@ -353,5 +506,3 @@ section{
     display: flex;
     flex-wrap: wrap;
 }
-
-
