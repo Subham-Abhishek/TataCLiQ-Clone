@@ -56,6 +56,20 @@ window.addEventListener('scroll',function(){
     upNav.classList.toggle('fed',window.scrollY)
     downNav.classList.toggle('expand',window.scrollY)
     })
+  //animated sign in appear
+    document.querySelector('#sign').addEventListener('mouseover',function(){
+        console.log("h");
+        document.querySelector('.speech-bubble').classList.add('display')
+    })
+    document.querySelector('.keep').addEventListener('mouseover',function(){
+        console.log("f");
+        document.querySelector('.speech-bubble').classList.add('display')
+    })
+    document.querySelector('.keep').addEventListener('mouseout',function(){
+        console.log("f");
+        document.querySelector('.speech-bubble').classList.remove('display')
+    })
+//----- appear end
 
     var searchExpand = document.querySelector('#search-expand')
     searchExpand.addEventListener('focus',function(){
@@ -85,13 +99,16 @@ window.addEventListener('scroll',function(){
     function show(a){
         categoryExpand.style.display = 'flex';
         arrow[+a].classList.add('arrow-icon')
-        section[+a].classList.add('show')
-        section[+a].classList.add('show`')
+        section[+a].style.display = "flex"
+        section[Number(a)-1].style.display = "none"
+        section[+a].style.flexWrap = "wrap"
     }
     function hide(a){
         categoryExpand.style.display = 'none'
         arrow[+a].classList.remove('arrow-icon')
-        section[+a].classList.remove('show')
+        section[+a].style.display = "none"
+
+        // section[+a].classList.remove('show')
     }
     function showb(a){     
         console.log( Number(a));
