@@ -30,18 +30,18 @@
             <div class="tata-luxury-page">
               <a href="">CLiQ Cash</a>
             </div>
-            <div class="tata-luxury-page">
-              <a href="">Gift Card</a>
+            <div class="tata-luxury-page" onclick="ope()">
+              <a href="#">Gift Card</a>
             </div>
-            <div class="tata-luxury-page">
-              <a href="">CLiQ Care</a>
+            <div class="tata-luxury-page" onclick="ope()">
+              <a href="#">CLiQ Care</a>
             </div>
-            <div class="tata-luxury-page">
-              <a href="">Track Orders</a>
+            <div class="tata-luxury-page" onclick="ope()">
+              <a href="#">Track Orders</a>
             </div>
-            <div class="tata-luxury-page" style="height: 40px;cursor: pointer;">
+            <div class="tata-luxury-page" onclick="ope()" style="height: 40px;cursor: pointer;">
               
-              <a href="" id="sign">Sign in / Sign Up</a>
+              <a href="#" id="sign">Sign in / Sign Up</a>
             </div>
           </div>
         </div>
@@ -1128,26 +1128,81 @@
         </div>
       </div>
     </nav>
+    <!--  Login Signup page starts  -->
+    <div class="cover">
+      <div class="container" id="container">
+        <div class="form-container sign-up-container">
+          <form action="#">
+            <i class="far fa-times-circle bd" onclick="clos()"></i>
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign Up</button>
+          </form>
+        </div>
+        <div class="form-container sign-in-container">
+          <form action="#">
+            
+            <h1>Sign in</h1>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            <button>Sign In</button>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p>To keep connected with us please login with your personal info</p>
+              <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <i class="far fa-times-circle bb" onclick="clos()"></i>
+                  <h1>Welcome to Tata CLiQ</h1>
+                  <p>Enter your personal details and start journey with us</p>
+                  <button class="ghost" id="signUp">Sign Up</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+    <!--  Login Signup page Ends  -->
     <div class="keep">
       <div class="speech-bubble">
-        <div class="register">Login/ Register</div>
-        <div class="account">
-          <img src="/icons/profileicon.png" alt="" style="width: 25px;">My account
+        <div class="register" onclick="ope()" >Login/ Register</div>
+        <div class="account" onclick="ope()">
+          <img src="icons/profileicon.png" alt="..." style="width: 25px;">My account
         </div>
-        <div class="account">
-          <img src="/icons/order-history.a92cd34e19fa.svg" alt="" style="width: 20px; margin-left: 4px;">Order History
+        <div class="account" onclick="ope()">
+          <img src="icons/order-history.a92cd34e19fa.svg" alt="..." style="width: 20px; margin-left: 4px;">Order History
         </div>
-        <div class="account" >
-          <img src="/icons/whist.svg" alt="" style="width: 15px; margin-left: 7px;">Saved List
+        <div class="account" onclick="ope()">
+          <img src="icons/whist.svg" alt="..." style="width: 15px; margin-left: 7px;">Saved List
         </div>
-        <div class="account">
-          <img src="/icons/alert.89aa376e9ac0.svg" alt=""style="width: 15px; margin-left:7px ">Alert & Coupon
+        <div class="account" onclick="ope()">
+          <img src="icons/alert.89aa376e9ac0.svg" alt="..."style="width: 15px; margin-left:7px ">Alert & Coupon
         </div>
-        <div class="account">
-          <img src="/icons/giftCards.c9b393b81026.svg" alt="" style="width: 20px; margin-left: 1px;">Gift Card
+        <div class="account" onclick="ope()">
+          <img src="icons/giftCards.c9b393b81026.svg" alt="..." style="width: 20px; margin-left: 1px;">Gift Card
         </div>
-        <div class="account">
-          <img src="/icons/cliqCash.89de362374b9.svg" alt="" style="width: 15px; margin-left: 5px;" >CLiQ Cash
+        <div class="account" onclick="ope()">
+          <img src="icons/cliqCash.89de362374b9.svg" alt="..." style="width: 15px; margin-left: 5px;" >CLiQ Cash
         </div>
       </div>
       </div>
