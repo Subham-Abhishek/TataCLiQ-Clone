@@ -90,36 +90,68 @@ window.addEventListener('scroll',function(){
     })
 
     //category dropdown
-
+    var black = document.getElementsByClassName('sub-category-value')
+    var blogo = document.querySelectorAll('Blogo')
+    console.log(blogo[0]);
     var subCategoryOption = document.querySelectorAll('.sub-category-option');
     var arrow = document.querySelectorAll('.arrow'); 
     var section = document.querySelectorAll('section');
     var categoryExpand = document.querySelector('.category-expand');
     var categoryExpandb = document.querySelector('.b');
     function show(a){
+        if(a==0){
+        section[Number(a)+1].style.display = "none"
+        section[Number(a)].style.display = "flex"
+        arrow[Number(a)+1].classList.remove('arrow-icon')
+        black[Number(a)].classList.remove('black')
+        black[Number(a)].classList.add('black')
+        black[Number(a)+1].classList.remove('black')
+        
+        }
         categoryExpand.style.display = 'flex';
         arrow[+a].classList.add('arrow-icon')
+        arrow[Number(a)+1].classList.remove('arrow-icon')
+        arrow[Number(a)-1].classList.remove('arrow-icon')
         section[+a].style.display = "flex"
+        section[Number(a)+1].style.display = "none"
         section[Number(a)-1].style.display = "none"
-        section[+a].style.flexWrap = "wrap"
+        black[+a].classList.add('black')
+        black[Number(a)-1].classList.remove('black')
+        black[Number(a)+1].classList.remove('black')
+        blogo[Number(a)-8].classList.add('showb')
+        blogo[Number(a)+1-8].classList.remove('showb')
+        blogo[Number(a)-1-8].classList.remove('showb')
     }
     function hide(a){
         categoryExpand.style.display = 'none'
-        arrow[+a].classList.remove('arrow-icon')
-        section[+a].style.display = "none"
-
-        // section[+a].classList.remove('show')
     }
+    //brand dropdown
     function showb(a){     
         console.log( Number(a));
+        if(a==15){
+            section[Number(a)].style.display = "flex"
+            section[Number(a)-1].style.display = "none"
+            arrow[Number(a)-1].classList.remove('arrow-icon')
+            black[Number(a)].classList.remove('black')
+            black[Number(a)].classList.add('black')
+            black[Number(a)-1].classList.remove('black')
+            }
         categoryExpandb.style.display = 'flex';
         arrow[+a].classList.add('arrow-icon')
-        section[+a].classList.add('show')       
+        arrow[Number(a)+1].classList.remove('arrow-icon')
+        arrow[Number(a)-1].classList.remove('arrow-icon')
+        section[+a].style.display = "flex"
+        section[Number(a)+1].style.display = "none"
+        section[Number(a)-1].style.display = "none" 
+        black[+a].classList.add('black')
+        black[Number(a)-1].classList.remove('black')
+        black[Number(a)+1].classList.remove('black')
+        blogo[Number(a)-8].classList.add('showb')
+        blogo[Number(a)+1-8].classList.remove('showb')
+        blogo[Number(a)-1-8].classList.remove('showb')
     }
     function hideb(a){
     categoryExpandb.style.display = 'none';
-    arrow[+a].classList.remove('arrow-icon')
-    section[+a].classList.remove('show')
 }
 
 // login signup page

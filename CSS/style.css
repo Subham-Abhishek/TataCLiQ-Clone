@@ -11,7 +11,6 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
     background-color: white;
 }
- 
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
 }
@@ -120,7 +119,7 @@ opacity: 0;
 .display{
     visibility: visible;
     opacity: 1;
-    animation: fadeIn 2000ms forwards;
+    animation: fadeIn 200ms forwards;
 }
 .hideee{
     visibility: hidden;
@@ -513,7 +512,7 @@ opacity: 0;
     height: 470px;
     z-index: 200;
     background: #fff;
-    top: 60px;
+    top: 57px;
     padding: 20px;
     padding-bottom: 0;
     /* display: flex; */
@@ -521,6 +520,9 @@ opacity: 0;
     left: 0;
     box-shadow: 0 6px 6px 0 rgb(156 156 156 / 24%),
     0 0 6px 0 rgb(0 0 0 / 12%);
+}
+.brands .category-expand{
+    top: 55px;
 }
 .sub-category{
     width: 20%;
@@ -536,14 +538,14 @@ opacity: 0;
     border-bottom: 1px solid #e4e4e4;
     text-align: left;
     font-size: 14px;
-    font-family: 'Rubik' semibold;
+    font-weight: 600;
     display: flex;
     color: #8d8d8d;
     cursor: pointer;
     padding-right: 25px;
     position: relative;
 }
-.sub-category-value:hover{
+.black{
     color: black;
 }
 .arrow-icon{
@@ -562,14 +564,17 @@ opacity: 0;
     transform: rotate(275deg);
 }
 .sub-category-option{
-    border: 1px solid green;
+
     width: 80%;
-    height: 470px;
+    height: 450px;
     display: flex;
     flex-direction: column;
+    /* flex-wrap: wrap; */
     padding-left: 45px;
     overflow: hidden;
-    flex-wrap: wrap;
+}
+.b .sub-category-option{
+    width: 53%;
 }
 .sub-category-option-value{
     width: 25%;
@@ -579,20 +584,67 @@ opacity: 0;
     color: #8d8d8d;
     cursor: pointer;
 }
+.sub-category-option-value:hover{
+    color: #FE1743;
+}
 .sub-category-option-header{
     width: 25%;
     height: auto;
     font-size: 14px;
+    font-weight: 600;
     line-height: 30px;
     color: black;
     cursor: pointer;
 }
-
-.show{
+section{
+    width: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    height: 450px;
+}
+section div{
+    width: 25%;
+}
+.brand-logos{
+    width: 35%;
+    height: 470px;
+    display: flex;
+    margin-top: -20px;
+    padding-top: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: -20px;
+    background-color: rgb(236,236,236);
+}
+.brand-logos Blogo{
+    width: 100%;
+    height: 300px;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.brand-logos Blogo div{
+    cursor: pointer;
+    width: 35%;
+    height: 110px;
+    margin: 20px;
+    /* height: 50px; */
+}
+.brand-logos > Blogo > div img{
+    border-radius: 50%;
+    width: 100%;
 }
 
+.showb{
+    display: flex !important;
+}
+.show{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 /*  footer section starts*/
 .footer{
     width: 100%;
@@ -753,9 +805,12 @@ h2{
 }
 p>a{
     text-decoration: underline;
-    color: blue;
+    color: black;
 }
-
+p>a:hover{
+    color: black;
+    text-decoration: underline;
+}
 
 /* login signup page*/
 h1 {
