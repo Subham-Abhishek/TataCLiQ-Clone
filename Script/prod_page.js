@@ -1,3 +1,29 @@
+let changeLayout = document.getElementById("gridLayout");
+function changeGridColumn() {
+    changeLayout.classList.toggle("listLayout");
+    let productsFootwear = document.getElementById('products_footwear');
+    productsFootwear.classList.toggle("narrow_products_footwear");
+}
+
+
+let collapsible = document.querySelectorAll('.expand');
+let plus_sign = document.querySelectorAll(".plus_sign");
+function collapse(a){
+    if (a == 1) {
+        collapsible[1].classList.toggle("brand_color_collapse");
+        collapsible[0].classList.add("brand_color_collapse");
+        plus_sign[1].classList.toggle("cross");
+        plus_sign[0].classList.remove("cross");
+    }
+    else{
+        collapsible[0].classList.toggle("brand_color_collapse");
+        collapsible[1].classList.add("brand_color_collapse");
+        plus_sign[0].classList.toggle("cross");
+        plus_sign[1].classList.remove("cross");
+    }
+}
+
+
 let shoesJSON = [
   {
     category: "Men",
@@ -176,3 +202,47 @@ function black_shoes() {
     productFilter(filteredProduct);
   }
 }
+
+
+let selectedField = document.getElementById("selectedField");
+let selectedText = document.getElementById("selectedText");
+let options = document.getElementsByClassName("options");
+let list = document.getElementById("lists");
+
+selectedField.onclick = function () {
+  list.classList.toggle("hideList");
+};
+
+for (element of options) {
+  element.onclick = function () {
+    selectedText.innerHTML = this.textContent;
+    // list.classList.toggle("hideList");
+  };
+}
+
+options[0].onclick = function() {
+  shoesJSON = shoesJSON.sort(function(a,b) {
+    return b.rating - a.rating;
+  })
+  productFilter(shoesJSON);
+  selectedText.innerHTML = this.textContent;
+  list.classList.toggle("hideList");
+}
+
+options[1].onclick = function () {
+  shoesJSON = shoesJSON.sort(function (a, b) {
+    return a.discounted_price - b.discounted_price;
+  });
+  productFilter(shoesJSON);
+  selectedText.innerHTML = this.textContent;
+  list.classList.toggle("hideList");
+};
+
+options[2].onclick = function () {
+  shoesJSON = shoesJSON.sort(function (a, b) {
+    return b.discounted_price - a.discounted_price;
+  });
+  productFilter(shoesJSON);
+  selectedText.innerHTML = this.textContent;
+  list.classList.toggle("hideList");
+};
