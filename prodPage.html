@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Formal Shoes - Upto 75% Off Online - TATA CLIQ</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+    <link rel="shortcut icon" href="icon.jpg" type="image/jpg" />
+    <link rel="stylesheet" href="CSS/prod_page.css" />
+  </head>
+  <body>
+    <h1>Footwear</h1>
+    <p id="noOfProd">24 Products</p>
+    <!-- <p>Home > Footwear > Men</p> -->
+    <ul id="breadcrumbs">
+        <li>Home</li>&nbsp;<div></div>&nbsp;
+        <li>Footwear</li>&nbsp;<div></div>&nbsp;
+        <li>Men</li>&nbsp;<div></div>&nbsp;
+        <li>Formal</li>
+    </ul>
+
+    <div id="sorting_changeLayout">
+        <div class="hero">
+            <div class="selector">
+                <div id="selectedField">
+                    <p>Sort By: <span id="selectedText"></span></p>
+                    <img src="https://www.tatacliq.com/src/general/components/img/sortIcon.44a2548639d1.svg" alt="">
+                </div>
+
+                <ul id="lists" class="hideList">
+                    <li class="options">
+                      <p>Popularity</p>
+                    </li>
+                    <li class="options">
+                      <p>Price Low to High</p>
+                    </li>
+                    <li class="options">
+                      <p>Price High to Low</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="changeLayout">
+            <div class="listLayout" id="gridLayout" onclick="changeGridColumn()"></div>
+        </div>
+    </div>
+
+    <div id="footwearPage">
+      <div id="prodFilters_cont">
+        <div id="filterContHeading">
+          <h3>Filters</h3>
+          <span id="filterClear">Clear All</span>
+        </div>
+        <div id="prodFilters">
+          <div>Department
+              <button id="subfilter_depart">Footwear</button>
+          </div>
+          <div>Category
+              <button id="subfilter_cat">Men &nbsp; &#10006;</button>
+          </div>
+          <div>Product Type
+              <button id="subfilter_prodtype">Formal &nbsp; &#10006;</button>
+          </div>
+          <div class="brand_color_collapse expand" onclick="collapse(0)">
+              <div class="filter_name">
+                  <div>Brand</div>
+                  <span class="plus_sign">&#10006;</span>
+              </div>
+              <div class="subfilter_brand">
+                  <div class="count_of_products">
+                      <div>
+                          <label class="radio" for="Arrow">
+                          <input type="checkbox" id="Arrow" name="brand" value="Arrow">
+                          <span class="check"></span>
+                          Arrow</label>
+                      </div>
+                      <strong style="font-size: 16px; color: #c7c7c7; font-weight: 500;">7</strong>
+                  </div>
+                  <div class="count_of_products">
+                      <div>
+                          <label class="radio" for="Ruosh">
+                          <input type="checkbox" id="Ruosh" name="brand" value="Ruosh">
+                          <span class="check"></span>
+                          Ruosh</label>
+                      </div>
+                      <strong style="font-size: 16px; color: #c7c7c7; font-weight: 500;">5</strong>
+                  </div>
+              </div>
+          </div>
+          <div class="brand_color_collapse expand" onclick="collapse(1)">
+              <div class="filter_name">
+                  <div>Colour</div>
+                  <span class="plus_sign">&#10006;</span>
+              </div>
+              <div class="subfilter_brand">
+                      <div>
+                          <label class="radio" for="Black">
+                          <input onclick="black_shoes()" type="checkbox" id="Black" name="color" value="Black">
+                          <span class="check"></span>
+                          Black</label>
+                      </div>
+                      <div>
+                          <label class="radio" for="Brown">
+                          <input type="checkbox" id="Brown" name="color" value="Brown">
+                          <span class="check"></span>
+                          Brown</label>
+                      </div>
+              </div>
+          </div>
+          <div class="filter_name">
+              <div>Price</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>Discount</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>Size</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>Clog/Flip-Flop Type</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>Fastening</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>Sandal Type</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>Shoe/Boot Type</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>Size Type</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>Sole Material</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>Tip Shape</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>All Discount</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+          <div class="filter_name">
+              <div>Availability</div>
+              <span class="plus_sign">&#10006;</span>
+          </div>
+        </div>
+    </div>
+      <div id="products_footwear"></div>
+</div>
+    <script src="script/prod_page.js"></script>
+
+  </body>
+</html>

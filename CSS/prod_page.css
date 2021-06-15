@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ececec;
+  margin-top: 100px;
+}
+
+h1,
+#noOfProd {
+  text-align: center;
+}
+#noOfProd {
+  margin-bottom: 120px;
+}
+
+#breadcrumbs {
+    width: auto;  
+    font-size: 13px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    text-overflow: ellipsis;
+    position: absolute;
+    left: 6vw;
+    top: 250px;
+    color: #4a4a4a;
+    padding-left: 0%;
+    text-overflow: ellipsis;
+}
+
+#breadcrumbs div {
+    width: 12px;
+    height: 12px;
+    background: url(https://www.tatacliq.com/src/pdp/components/img/arrow.bce965cf106a.svg);
+    background-size: cover;
+}
+
+.hero * {
+  margin: 0;
+  padding: 0;
+}
+.hero {
+  position: absolute;
+  right: 10%;
+  top: 31%;
+  z-index: 3;
+}
+.selector {
+  width: 300px;
+}
+#selectedField {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: transparent;
+  border: 1px solid #d2d2d2;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+#selectedField p {
+  color: #8f8f8f;
+}
+#selectedField span {
+  color: black;
+  text-decoration: none;
+}
+#selectedField img {
+  width: 20px;
+}
+#lists {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.options {
+  width: 100%;
+  padding: 15px;
+  list-style: none;
+  cursor: pointer;
+  /* box-sizing: border-box; */
+}
+.options:hover {
+  background-color: #ecececa2;
+}
+.hideList {
+  display: none;
+}
+
+
+#gridLayout{
+    width: 20px;
+    height: 20px;
+    background: url(https://www.tatacliq.com/src/plp/components/img/list.64d05cd6edd8.svg);
+    background-size: cover;
+    position: absolute;
+    top: 32.5%;
+    right: 7%;
+    margin-left: 5px;
+}
+.listLayout{
+    background: url(https://www.tatacliq.com/src/plp/components/img/grid.59a4ba72b1df.svg) !important;
+    background-size: contain !important;
+}
+
+#footwearPage {
+  display: flex;
+  max-width: 87vw;
+  height: auto;
+  margin: 50px auto;
+  /* margin-bottom: 0%; */
+  background-color: #ececec;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  position: sticky;
+}
+#prodFilters_cont {
+  /* height: auto; */
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-width: 25%;
+  border-radius: 10px;
+  margin-right: 15px;
+  /* margin-top: 10px; */
+}
+#prodFilters {
+  font-size: 15px;
+  padding: 0px 20px;
+}
+#filterContHeading {
+  display: flex;
+  width: 90%;
+  /* height: 25px; */
+  justify-content: space-between;
+  padding: 5%;
+  background-color: #f5f5f5;
+  margin: 15px auto;
+  margin-top: 0%;
+  font-size: 14px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#prodFilters > div {
+  width: 100%;
+  display: grid;
+  padding: 15px 0px;
+  border-top: 1px solid #e2e2e2;
+  font-weight: 600;
+  /* transition: 1s; */
+}
+.filter_name {
+  display: flex !important;
+  justify-content: space-between;
+  width: 100%;
+  /* cursor: pointer; */
+}
+.plus_sign {
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 10px;
+  transform: rotate(45deg);
+  text-decoration: none;
+  color: #bfbfbf;
+  transition: 300ms;
+}
+.cross {
+  transition: 500ms;
+  transform: rotate(-270deg);
+}
+#subfilter_depart,
+#subfilter_cat,
+#subfilter_prodtype {
+  width: 80px;
+  margin-top: 10px;
+  height: 30px;
+  border: transparent;
+  border-radius: 20px;
+  color: #a6a6a6;
+  font-size: 14px;
+  cursor: pointer;
+}
+.brand_color_collapse {
+  animation: expansion 300ms ease-in-out forwards;
+}
+@keyframes expansion {
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 20px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+}
+.subfilter_brand > div {
+  margin-top: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #363636;
+}
+.subfilter_brand input {
+  width: 200px;
+  margin-right: 10px;
+}
+.radio {
+  /* display: block; */
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  /* font-size: 25px; */
+}
+
+/* Hide the default radio button */
+.radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* custom radio button */
+.check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: url(https://www.tatacliq.com/src/general/components/img/checkbox-untick.acb1d46e680e.svg);
+  border-radius: 50%;
+  background-size: cover;
+}
+
+
+.radio input:checked ~ .check {
+  background: url(https://www.tatacliq.com/src/general/components/img/checkbox-tick.8aa2e5c9601b.svg);
+  background-size: cover;
+}
+
+.count_of_products {
+  display: flex;
+  justify-content: space-between;
+}
+.count_of_products strong {
+  margin-right: 15px;
+}
+
+#filterClear {
+  color: #de3f75;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  /* margin-right: 20px; */
+}
+
+#products_footwear {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  width: 75%;
+  height: 180vh;
+  margin-left: 5px;
+  padding: 0px 10px;
+  background-color: #ececec;
+  overflow-y: scroll;
+  grid-template-rows: 45;
+}
+.narrow_products_footwear {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+#products_footwear > figure {
+  width: 100%;
+  background-color: #ececec;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+}
+#products_footwear > figure p,
+#products_footwear > figure > div {
+  margin: 10px;
+  margin-left: 0;
+}
+
+/* resposive media query*/
+
+@media only screen and (max-width: 900px) {
+  #products_footwear {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    height: 180vh;
+    margin-left: 5px;
+    padding: 0px 10px;
+    background-color: #ececec;
+    overflow-y: scroll;
+  }
+  #products_footwear > figure {
+    width: 200px;
+    background-color: #ececec;
+    border-radius: 8px;
+    position: relative;
+  }
+}
+
+/* responive media query end */
+
+.discountArrow {
+  position: absolute;
+  width: 20%;
+  left: 0px;
+  top: 5px;
+  border-radius: 0;
+  background-size: cover;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  color: white;
+}
+#prodName {
+  display: flex;
+  justify-content: space-between;
+  height: 18px;
+}
+#wishlistIcon img {
+  width: 15px;
+  height: auto;
+  /* float: right; */
+  /* background-color: tomato; */
+}
+#products_footwear::-webkit-scrollbar {
+  display: none;
+}
+#products_footwear > figure:hover {
+  /* transition: 500ms; */
+  transform: scale(1.01);
+  border: 2px solid #ececec;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 5px;
+  /* height: 380px; */
+  margin-bottom: 10px;
+}
+.small-card-img{
+  height: 300px !important;
+}
+span {
+  text-decoration: line-through;
+  color: #9b9b9b;
+}
+#rating {
+  background-color: #49a862;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  width: 40px;
+  line-height: 20px;
+  border-radius: 2px;
+}
