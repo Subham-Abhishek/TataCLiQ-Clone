@@ -1,6 +1,27 @@
+var size = "";
+function btn1() {
+  size = document.getElementById("sizebtn1").innerText;
+}
+function btn2() {
+  size = document.getElementById("sizebtn2").innerText;
+}
+function btn3() {
+  size = document.getElementById("sizebtn3").innerText;
+}
+function btn4() {
+  size = document.getElementById("sizebtn4").innerText;
+}
+function btn5() {
+  size = document.getElementById("sizebtn5").innerText;
+}
+function btn6() {
+  size = document.getElementById("sizebtn6").innerText;
+}
+
 let selectedProduct = localStorage.getItem("selectedProduct");
 selectedProduct = JSON.parse(selectedProduct);
 console.log(selectedProduct[0]);
+document.title = selectedProduct[0].description;
 
 let prod_carousel = document.getElementById("prod_carousel");
 let prodName = document.getElementById("prod-name");
@@ -141,3 +162,330 @@ span[0].onclick = function () {
     }
   }
 };
+
+let buyNow = document.getElementById("buy_now");
+let addToBag = document.getElementById("add_to_bag");
+let goToBag = document.getElementById("go_to_bag");
+
+//Number of Products in cart
+var bagItem = localStorage.getItem("bagItem");
+if (bagItem == null) {
+} else {
+  document.querySelector(".numb").style.display = "flex";
+  bagItem = JSON.parse(bagItem);
+  document.querySelector(".numb").innerHTML = bagItem.length;
+}
+
+
+
+buyNow.onclick = function(){
+  let id=1;
+  let bagItem = localStorage.getItem("bagItem");
+
+  if(bagItem == null){
+    bagItem = [];
+  }
+  else{
+    bagItem = JSON.parse(bagItem);
+    bagItem.forEach(function(ele) {
+      if(ele.description == selectedProduct[0].description && ele.image1 == selectedProduct[0].image1) id = 0
+    });
+  }
+  if (id == 1) {
+    if (size == "") {
+      alert("Please Select Size First");
+    } else {
+      selectedProduct[0].size = size;
+      bagItem.push(selectedProduct[0]);
+      localStorage.setItem("bagItem", JSON.stringify(bagItem));
+
+      window.open("prodPage","_blank");
+    }
+  } 
+}
+
+//Add To Bag
+
+addToBag.onclick = function(){
+  console.log(size);
+  let id=1;
+  let bagItem = localStorage.getItem("bagItem");
+
+  if(bagItem == null){
+    bagItem = [];
+  }
+  else{
+    bagItem = JSON.parse(bagItem);
+    bagItem.forEach(function(ele) {
+      if(ele.description == selectedProduct[0].description && ele.image1 == selectedProduct[0].image1){
+        id = 0;
+        alert("This Item is present in your bag");
+      }
+    });
+  }
+  if(id == 1){
+    if(size == ""){
+      alert("Please Select Size First")
+    }
+    else{
+      selectedProduct[0].size = size;
+      bagItem.push(selectedProduct[0]);
+      localStorage.setItem("bagItem", JSON.stringify(bagItem));
+
+      addToBag.style.display = "none";
+      goToBag.style.display = "block";
+    }
+  } 
+}
+
+//Go To Bag
+
+goToBag.onclick = function(){
+  window.open("prodPage.html", "_blank");
+}
+
+
+//Navbar and Login Signup
+
+
+window.addEventListener("scroll", function () {
+  var navbar = document.querySelector(".header");
+  var upNav = document.querySelector(".up-nav");
+  var logo = document.querySelector(".logo");
+  var downNav = document.querySelector(".down-nav");
+  navbar.classList.toggle("sticky", window.scrollY);
+  logo.classList.toggle("reduce", window.scrollY);
+  upNav.classList.toggle("fed", window.scrollY);
+  downNav.classList.toggle("expand", window.scrollY);
+});
+//animated sign in appear
+document.querySelector("#sign").addEventListener("mouseover", function () {
+  console.log("h");
+  document.querySelector(".speech-bubble").classList.add("display");
+});
+document.querySelector(".keep").addEventListener("mouseover", function () {
+  console.log("f");
+  document.querySelector(".speech-bubble").classList.add("display");
+});
+document.querySelector(".keep").addEventListener("mouseout", function () {
+  console.log("f");
+  document.querySelector(".speech-bubble").classList.remove("display");
+});
+document.querySelector(".accounts").addEventListener("mouseover", function () {
+  document.querySelector(".speech-bubble").classList.add("display");
+});
+//----- appear end
+
+var searchExpand = document.querySelector("#search-expand");
+searchExpand.addEventListener("focus", function () {
+  var search = document.querySelector(".search");
+  var searchIcon = document.querySelector(".search-icon");
+  var cross = document.querySelector(".cross");
+  cross.style.opacity = 1;
+  searchIcon.classList.add("fedd");
+  search.classList.add("strech");
+});
+var cross = document.querySelector(".cross");
+cross.addEventListener("click", function () {
+  var search = document.querySelector(".search");
+  var searchIcon = document.querySelector(".search-icon");
+  searchIcon.classList.remove("fedd");
+  search.classList.remove("strech");
+  cross.style.opacity = 0;
+});
+
+//category dropdown
+var black = document.getElementsByClassName("sub-category-value");
+var blogo = document.querySelectorAll("Blogo");
+console.log(blogo[0]);
+var subCategoryOption = document.querySelectorAll(".sub-category-option");
+var arrow = document.querySelectorAll(".arrow");
+var section = document.querySelectorAll("section");
+var categoryExpand = document.querySelector(".category-expand");
+var categoryExpandb = document.querySelector(".b");
+function show(a) {
+  if (a == 0) {
+    section[Number(a) + 1].style.display = "none";
+    section[Number(a)].style.display = "flex";
+    arrow[Number(a) + 1].classList.remove("arrow-icon");
+    black[Number(a)].classList.remove("black");
+    black[Number(a)].classList.add("black");
+    black[Number(a) + 1].classList.remove("black");
+  }
+  categoryExpand.style.display = "flex";
+  arrow[+a].classList.add("arrow-icon");
+  arrow[Number(a) + 1].classList.remove("arrow-icon");
+  arrow[Number(a) - 1].classList.remove("arrow-icon");
+  section[+a].style.display = "flex";
+  section[Number(a) + 1].style.display = "none";
+  section[Number(a) - 1].style.display = "none";
+  black[+a].classList.add("black");
+  black[Number(a) - 1].classList.remove("black");
+  black[Number(a) + 1].classList.remove("black");
+  blogo[Number(a) - 8].classList.add("showb");
+  blogo[Number(a) + 1 - 8].classList.remove("showb");
+  blogo[Number(a) - 1 - 8].classList.remove("showb");
+}
+function hide(a) {
+  categoryExpand.style.display = "none";
+}
+//brand dropdown
+function showb(a) {
+  console.log(Number(a));
+  if (a == 15) {
+    section[Number(a)].style.display = "flex";
+    section[Number(a) - 1].style.display = "none";
+    arrow[Number(a) - 1].classList.remove("arrow-icon");
+    black[Number(a)].classList.remove("black");
+    black[Number(a)].classList.add("black");
+    black[Number(a) - 1].classList.remove("black");
+  }
+  categoryExpandb.style.display = "flex";
+  arrow[+a].classList.add("arrow-icon");
+  arrow[Number(a) + 1].classList.remove("arrow-icon");
+  arrow[Number(a) - 1].classList.remove("arrow-icon");
+  section[+a].style.display = "flex";
+  section[Number(a) + 1].style.display = "none";
+  section[Number(a) - 1].style.display = "none";
+  black[+a].classList.add("black");
+  black[Number(a) - 1].classList.remove("black");
+  black[Number(a) + 1].classList.remove("black");
+  blogo[Number(a) - 8].classList.add("showb");
+  blogo[Number(a) + 1 - 8].classList.remove("showb");
+  blogo[Number(a) - 1 - 8].classList.remove("showb");
+}
+function hideb(a) {
+  categoryExpandb.style.display = "none";
+}
+
+// login signup page
+
+const signUpButton = document.getElementById("signUp");
+const signInButton = document.getElementById("signIn");
+const container = document.getElementById("container");
+
+signUpButton.addEventListener("click", () => {
+  container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener("click", () => {
+  container.classList.remove("right-panel-active");
+});
+
+var loginData = localStorage.getItem("loginData");
+if (loginData == null) {
+  loginData = [];
+  //sign up data store starts
+  function register(e) {
+    e.preventDefault();
+    let signupform = document.querySelector("#signup-form");
+    let name = signupform.name.value;
+    let mail = signupform.mail.value;
+    let pass = signupform.pass.value;
+    let a = 1;
+
+    let users = {
+      name,
+      mail,
+      pass,
+    };
+
+    if (users.name.trim() == "") alert("Enter Your Name");
+    else if (users.mail.indexOf("@") == -1)
+      alert("Enter Your Correct E-mail ID");
+    else if (users.pass == "") alert("Password should not be Empty!");
+    else {
+      let userData = localStorage.getItem("users");
+      if (userData == null) {
+        userData = [];
+        //  userData.push(users);
+      } else {
+        userData = JSON.parse(userData);
+        console.log(userData);
+      }
+      userData.forEach(function (e) {
+        if (e.name == users.name && e.mail == users.mail) {
+          alert("You are already part of our family");
+          a = 0;
+        }
+      });
+      if (a == 1) userData.push(users);
+
+      localStorage.setItem("users", JSON.stringify(userData));
+      signupform.name.value = "";
+      signupform.mail.value = "";
+      signupform.pass.value = "";
+      container.classList.remove("right-panel-active");
+    }
+  }
+  //sign up data store  ends
+
+  //login authentication starts
+
+  function login(e) {
+    e.preventDefault();
+    let loginForm = document.querySelector("#login-form");
+    let email = loginForm.email.value;
+    let passw = loginForm.passw.value;
+
+    let users = {
+      email,
+      passw,
+    };
+
+    if (users.email.indexOf("@") == -1) alert("Enter Your Correct E-mail ID");
+    else if (users.passw == "") alert("Password should not be Empty!");
+    else {
+      let userData = localStorage.getItem("users");
+      if (userData == null) {
+        alert("You are not registered!!");
+        loginForm.email.value = "";
+        loginForm.passw.value = "";
+        container.classList.add("right-panel-active");
+      } else {
+        userData = JSON.parse(userData);
+      }
+
+      for (let i = 0; i < userData.length; i++) {
+        if (
+          userData[i].mail == users.email &&
+          userData[i].pass == users.passw
+        ) {
+          clos();
+          loginData.push(userData[i]);
+          localStorage.setItem("loginData", JSON.stringify(loginData));
+          document.querySelector(".sig").style.display = "none";
+          document.querySelector(".accounts").style.display = "flex";
+          document.querySelector(".register").style.display = "none";
+          document.querySelector(".logout").style.display = "flex";
+          // document.querySelector('.UserName').textContent = userData[i].name;
+          location.reload();
+        } else if (i == userData.length - 1) {
+          alert("Invalid Credentials");
+        }
+      }
+    }
+  }
+  //login authentication ends
+  // signIn signup page render
+  function ope() {
+    var cover = document.querySelector(".cover");
+    cover.style.display = "block";
+  }
+  function clos() {
+    var cover = document.querySelector(".cover");
+    cover.style.display = "none";
+  }
+} else {
+  document.querySelector(".sig").style.display = "none";
+  document.querySelector(".accounts").style.display = "flex";
+  document.querySelector(".register").style.display = "none";
+  document.querySelector(".logout").style.display = "flex";
+  document.querySelector(".UserName").textContent =
+    JSON.parse(loginData)[0].name;
+}
+
+function logout() {
+  localStorage.removeItem("loginData");
+  location.reload();
+}
