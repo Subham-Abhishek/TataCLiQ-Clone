@@ -45,6 +45,10 @@ padding-bottom: 3.5vh;
     padding-bottom: 1.5vh;
     padding-left: 14vh;
 }
+.logo img{
+    width: 45%;
+    height: 3.5vw;
+}
 .nav-right{
     width: 80.5%;
     height: 100%;
@@ -85,10 +89,16 @@ a, a:hover, a:focus, a:active {
     height: 100%;
     align-items: center;
 }
+.sig{
+    display: flex;
+}
 .login-and-tracktab div{
     padding-left: 30px;
 }
-
+.logout{
+    display: none;
+    cursor: pointer;
+}
 .speech-bubble {
 	position: absolute;
     width: 180px;
@@ -153,6 +163,7 @@ opacity: 0;
     font-size: 14px;
     color: white;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -162,10 +173,47 @@ opacity: 0;
  width: 100%;
  padding: 20px;
  height: 25px;
+ cursor: pointer;
  font-size: 15px;
 }
 .account img{
     margin-right: 10px;
+}
+.accounts{
+    width:150px;
+    height: 40px;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-right: 80px;
+    display: none;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    align-items: center;
+}
+.profile-logo{
+    width: auto;
+    display: flex;
+    align-items: center !important;
+    margin-right: 10px;
+    height: 100%;
+}
+.profile-logo div{
+    width: 25px;
+    height: 25px;
+    padding-left: 0;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+.profile-logo > img{
+    width: 12px;
+    margin-left: 10px;
+    height: 20px;
+}
+.UserName{
+    margin: 0;
 }
 .nav-right .down-nav{
     height:60px ;
@@ -207,7 +255,7 @@ opacity: 0;
     margin-left: 0.313rem;
 }
 .dropdowns .brands{
-    width: 34%;
+    width: 38%;
     height: 3.75rem;
     display: flex;
     padding: 0 8px 0 10px;
@@ -216,7 +264,7 @@ opacity: 0;
     align-items: center;
 }
 .category .img{
-    width: 13%;
+    width: 2rem;
     height: 12px;
     margin-left: 0.313rem;
     background-position: center;
@@ -229,9 +277,9 @@ opacity: 0;
     transition: 300ms;
 }
 .brands .imgg{
-    width: 17%;
+    width: 2rem;
     height: 12px;
-    /* margin-left: 2px; */
+    margin-left: 2px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 15px 13px;
@@ -266,6 +314,7 @@ opacity: 0;
     transition: all 300ms linear;
 }
 .search input{
+    /* position: relative; */
     width: 100%;
     background-color: transparent;
     border: 0;
@@ -286,13 +335,13 @@ opacity: 0;
     font: 600 14.3333px Arial;
 }
 .cross{
-    position: relative;
+    right: 14rem;
+    position: fixed;
     width: 16px;
     height: 16px;
     background-color: white;
     background-image: url(https://image.flaticon.com/icons/png/128/2723/2723639.png);
     background-size: 16px 16px;
-    left: 36rem;
     cursor: pointer;
     transition: all 200ms;
     opacity: 0;
@@ -339,6 +388,20 @@ opacity: 0;
 }
 .cart-whistlist div{
     cursor: pointer;
+}
+.numb{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 50%;
+    margin-left: 13px;
+    font-size: 12px;
+    background-color: red;
 }
 /* nav ends*/
 .carousel{
@@ -400,10 +463,13 @@ opacity: 0;
     width: 100%;
 }
 .new-on-click{
-    width: 75%;
+    width: 100%;
     height: 28vw;
     margin: auto;
-    padding: 5px 10px;
+    /* padding: 5px /10px; */
+}
+.new{
+   margin-top: -90px;
 }
 .new-on-click img{
     width: 100%;
@@ -412,13 +478,15 @@ opacity: 0;
 /*cloth brands style starts */
 .brands-section{
     width: 75%;
-    height: 25.5vw;
+    height: auto;
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     margin: auto;
     margin-bottom: 4.6vw;
 }
 .brands-section > div{
-    width: 25%;
+    width: 250px;
     height: 100%;
     padding: 5px 10px;
 }
@@ -432,72 +500,71 @@ opacity: 0;
     height: 27.5vw;
     /* border: 1px solid;   */
  }
-.owl-carousel{
-   width: 74.5%;
-   margin: auto;
-   height: 40vw;
-   pad: 5px;
+.ham{
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    right: 0;
+    margin-right: 20px;
+    /* background-color: black; */
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.owl-carousel .item{
+.ham:hover span:nth-child(1){
+    transform: translateX(-5px);
+    transition: 200ms ease-in-out;
+}
+.ham:hover span:nth-child(2){
+    transform: translateX(5px);
+    transition: 200ms ease-in-out;
+}
+.ham:hover span:nth-child(3){
+    transform: translateX(-5px);
+    transition: 200ms ease-in-out;
+}
+.ham span{
+    display: inline-block;
     width: 100%;
-    padding: 5px 10px;
-    height: 24.3vw;
-    
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+    transition: 200ms ease-in-out;
 }
-
-.item > img{
-    width: 100%;
-    height: 100%;
-}
-.owl-nav{
-    width: 8.5%;
-    height: 6vw;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    top: -7vw;
-    right: 3.5%;
-}
-.owl-nav-prev{
-    width: 48%;
-    height: 3vw;
-    position: absolute;
-    cursor: pointer;
-    background-color: rgb(255,255,255);
-    border-radius:  20px 0 0 20px;
-    display: flex;
-    justify-content: center;
-}
-.owl-nav-next{
-    position: absolute;
-    width: 48%;
-    height: 3vw;
-    cursor: pointer;
-    background-color:rgb(255,255,255);
-    border-radius: 0 20px 20px 0;
-    display: flex;
-    justify-content: center;
-}
-.owl-nav-prev img{
-    transform: rotate(180deg);
-    width: 20px;
-}
-.owl-nav-next img{
-    width: 20px;
-}
-
-
-
-
-
-
+ @media only screen and (max-width: 900px) {
+    .logo.reduce{
+        padding: 0;
+        padding-top: 4vh;
+        padding-left: 6%;
+    }
+       .header{
+           height: 60px;
+           display: flex;
+           align-items: center;
+       }
+       .nav-right{
+           display: none;
+       }
+       .logo img{
+           width: 60px;
+           height: 40px;
+           margin-top: -15px !important;
+       }
+       .ham{
+           display: flex;
+       }
+   }
 @media only screen and (max-width: 600px) {
     .logo.reduce{
         padding-left: 0;
+        
     }
     .header>.logo{
         padding-left: 0;
-      
+    }
+    .logo img{
+        width: 60px;
+        height: 40px;
     }
 }
 
@@ -602,6 +669,7 @@ section{
     flex-direction: column;
     flex-wrap: wrap;
     height: 450px;
+    transition:all 300ms ease-in-out;
 }
 section div{
     width: 25%;
@@ -1044,4 +1112,81 @@ form input {
 .bd:hover,.bb:hover{
     transform: scale(2);
     transition: all 300ms ease-in-out;
+}
+/* login signup ends */
+
+main{
+    width: 100%;
+    /* margin: 100px auto; */
+    overflow: hidden;
+    /* position:absolute; */
+    background-color: rgb(236,236,236);
+}
+.but-click{
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    margin-right: 30vh;
+    width: 65px;
+}
+.scroller {
+  display:flex;
+  align-items: center;
+  float: right;
+  font-size: 60px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding-left: 10px;
+  color: gray;
+  transform: rotate(180Deg);
+  left: 88.5%;
+  background: #ffffff;
+  border-radius: 0 15px 15px 0;
+}
+.scroller:nth-of-type(2) {
+    text-align: right;
+    transform: rotate(0Deg);
+}
+.scroller div{
+  width: 20px;
+  height: 20px;
+  background: url(https://www.tatacliq.com/src/general/components/img/arrow.728e31d0944a.svg);
+  background-size: contain;
+}
+#similar_products_carousel {
+    width: 73.7%;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+#similar_products_carousel::-webkit-scrollbar{
+    visibility: hidden;
+}
+.caraousel_images{
+    min-width: 250px;
+    position: relative;
+    left: 0;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.caraousel_images img:hover{
+    transform: none !important;
+}
+.caraousel_images img{
+  width: 240px;
+  height:320px;
+  border-radius: 5px;
+}
+img{
+    transition: 250ms ease-in-out;
+}
+img:hover{
+    transform: scale(1.02);
+    transition: 250ms ease-in-out;
 }

@@ -1,50 +1,38 @@
 
-const responsive = {
-    0: {
-        items: 1
-    },
-    320: {
-        items: 1
-    },
-    560: {
-        items: 2
-    },
-    960: {
-        items: 3
-    }
-}
-$(document).ready(function(){
-    $('#owl-one').owlCarousel({
-        loop: true,
-        autoplay: false,
-        autoplayTimeout: 2000,
-        dots: false,
-        nav: true,
-        navText: [$('.first .owl-nav-prev'), $('.first .owl-nav-next')],
-        responsive: {
-            0:{
-              items: 1
-            },
-            480:{
-              items: 3
-            },
-            769:{
-              items: 4
-            }
+    let span = document.getElementsByClassName("scroller");
+    let div = document.getElementsByClassName('caraousel_images');
+    let l = 0;
+    function leftt() {
+        l++;
+        for(let i of div){
+            if(l==0){i.style.left = "0px"}
+            if(l==1){i.style.left = "-250px"}
+            if(l==2){i.style.left = "-500px"}
+            if(l==3){i.style.left = "-750px"}
+            if(l==4){i.style.left = "-1250px"}
+            if(l==5){i.style.left = "-1500px"}
+            if(l==6){i.style.left = "-1750px"}
+            if(l==7){i.style.left = "-2000px"}
+            if(l>7){l = 0;}
         }
-            
-    });
+    }
+    function rightt() {
+        l--;    
+        for(let i of div){
+            if(l==0){i.style.left = "0px"}
+            if(l==1){i.style.left = "-250px"}
+            if(l==2){i.style.left = "-500px"}
+            if(l==3){i.style.left = "-750px"}
+            if(l==4){i.style.left = "-1250px"}
+            if(l==5){i.style.left = "-1500px"}
+            if(l==6){i.style.left = "-1750px"}
+            if(l==7){i.style.left = "-2000px"}
+            if(l<1){l = 0;}
+        }
+    }
 
-    $('#owl-two').owlCarousel({
-        loop: true,
-        autoplay: false,
-        autoplayTimeout: 2000,
-        dots: false,
-        nav: true,
-        navText: [$('.second .owl-nav-prev'), $('.second .owl-nav-next')],
-        responsive: responsive
-    });
-});
+
+
 
 window.addEventListener('scroll',function(){
     var navbar = document.querySelector(".header");
@@ -68,6 +56,10 @@ window.addEventListener('scroll',function(){
     document.querySelector('.keep').addEventListener('mouseout',function(){
         console.log("f");
         document.querySelector('.speech-bubble').classList.remove('display')
+    })
+    document.querySelector('.accounts').addEventListener('mouseover',function(){
+        document.querySelector('.speech-bubble').classList.add('display')
+        
     })
 //----- appear end
 
@@ -168,8 +160,107 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 
+var loginData = localStorage.getItem('loginData');
+if(loginData == null){
+   loginData = []
+    //sign up data store starts
+function register(e){
+    e.preventDefault()
+    let signupform = document.querySelector("#signup-form")
+     let name = signupform.name.value;
+     let mail = signupform.mail.value;
+     let pass = signupform.pass.value;
+     let a=1;
+
+     let users = {
+        name,
+        mail,
+        pass
+    }; 
+
+    if(users.name.trim() == '') alert('Enter Your Name');
+    else if(users.mail.indexOf('@')==-1) alert('Enter Your Correct E-mail ID');
+    else if(users.pass == '') alert('Password should not be Empty!')
+    else{   
+     let userData = localStorage.getItem("users")
+     if(userData == null){
+         userData = [];
+        //  userData.push(users);
+     }
+     else{
+         userData = JSON.parse(userData);
+          console.log(userData);
+    }
+        userData.forEach(function(e){
+            if(e.name == users.name && e.mail == users.mail){
+                alert("You are already part of our family")
+                a=0;
+            }
+        });
+        if(a==1) userData.push(users)
+
+     localStorage.setItem('users',JSON.stringify(userData));
+     signupform.name.value=""
+     signupform.mail.value=""
+     signupform.pass.value=""
+     container.classList.remove("right-panel-active");
+    }
+}
+//sign up data store  ends
+ 
+//login authentication starts
+
+
+function login(e){
+    e.preventDefault();
+    let loginForm = document.querySelector("#login-form")
+    let email = loginForm.email.value;
+    let passw = loginForm.passw.value;
+
+    let users = {
+       email,
+       passw
+   }; 
+
+   if(users.email.indexOf('@') == -1) alert('Enter Your Correct E-mail ID');
+   else if(users.passw == '') alert('Password should not be Empty!')
+   else{   
+    let userData = localStorage.getItem('users')
+    if(userData == null){
+        alert("You are not registered!!")
+        loginForm.email.value = ""  
+        loginForm.passw.value = ""  
+        container.classList.add("right-panel-active");
+    }
+    else{
+        userData = JSON.parse(userData);
+    }
+
+    for(let i=0 ;i < userData.length ;i++){
+        if(userData[i].mail == users.email && userData[i].pass == users.passw){
+            clos();
+            loginData.push(userData[i])
+            localStorage.setItem('loginData',JSON.stringify(loginData)) 
+            document.querySelector('.sig').style.display = "none"
+            document.querySelector('.accounts').style.display = "flex"
+            document.querySelector('.register').style.display = "none"
+            document.querySelector('.logout').style.display = "flex"
+            // document.querySelector('.UserName').textContent = userData[i].name;
+            location.reload()
+            
+        }
+        else if(i== userData.length-1){
+          alert("Invalid Credentials")
+        }
+    }
+ }
+    
+      
+}
+//login authentication ends
 // signIn signup page render
 function ope(){
+
     var cover = document.querySelector('.cover')
     cover.style.display='block'
 }
@@ -177,5 +268,20 @@ function clos(){
     var cover = document.querySelector('.cover')
     cover.style.display='none'
 }
+}
+else{
+    document.querySelector('.sig').style.display = "none"
+    document.querySelector('.accounts').style.display = "flex"
+    document.querySelector('.register').style.display = "none"
+    document.querySelector('.logout').style.display = "flex"
+    document.querySelector('.UserName').textContent = JSON.parse(loginData)[0].name;
 
+
+}
+
+
+function logout(){
+    localStorage.removeItem('loginData')
+    location.reload()
+}
 

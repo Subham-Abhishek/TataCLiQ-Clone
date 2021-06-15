@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping Cart - TATA CLiQ</title>
+    <link rel="icon" href="unnamed.png" type="png">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="wrap">
+      <!--  Navbar starts  -->
+        <div class="nav">
+            <div class="logo">
+                <img src="images/screencapture-tatacliq-2021-05-28-21_43_50.png" alt="">
+            </div>
+            <div class="accounts">
+                <div class="profile-logo">
+                    <div>
+                    <img src="images/profile.39b59dc38fd3.png" alt="" style="width: 25px;height: 25px;">
+                    </div>
+                    <p class="UserName">Abhishek</p>
+                    <img src="images/down-arrow-white.7d24202a27ce.svg" alt="">
+                </div>
+            </div>
+        </div>
+      <!--  Navbar Ends  -->
+
+        <div class="keep">
+            <div class="speech-bubble">
+              <div class="account" onclick="ope()">
+                <img src="icons/profileicon.png" alt="..." style="width: 25px;">My account
+              </div>
+              <div class="account" onclick="ope()">
+                <img src="icons/order-history.a92cd34e19fa.svg" alt="..." style="width: 20px; margin-left: 4px;">Order History
+              </div>
+              <div class="account" onclick="ope()">
+                <img src="icons/whist.svg" alt="..." style="width: 15px; margin-left: 7px;">Saved List
+              </div>
+              <div class="account" onclick="ope()">
+                <img src="icons/alert.89aa376e9ac0.svg" alt="..."style="width: 15px; margin-left:7px ">Alert & Coupon
+              </div>
+              <div class="account" onclick="ope()">
+                <img src="icons/giftCards.c9b393b81026.svg" alt="..." style="width: 20px; margin-left: 1px;">Gift Card
+              </div>
+              <div class="account" onclick="ope()">
+                <img src="icons/cliqCash.89de362374b9.svg" alt="..." style="width: 15px; margin-left: 5px;" >CLiQ Cash
+              </div>
+            </div>
+        </div>
+   <!--  nav ends-->
+
+   <div class="nav sec">
+    <div class="logo my">
+       My Bag
+    </div>
+    <div class="accounts">
+        <div class="profile-logo b">
+            Delhi , 110001
+            <input type="text" placeholder="Change PIN Code">
+        </div>
+    </div>
+   </div>
+   <!--my bag ends-->
+   <div class="info">
+    Apply a relevant <b>coupon code</b> here to avail any additional discount. Applicable <b>cashback</b> if any will be credited to your account as per T&C.
+   </div>
+   <div class="product-info">
+     <div class="product-side">
+       <div class="product">
+         <div class="img">
+           <img src="images/cart1.jpeg" alt="">
+         </div>
+         <div class="details">
+           <p class="product-name">Vark by Westside Pink Floral A-Line And Palazzos Set</p>
+           <p class="price">₹3299</p>
+           <div class="quantity">
+             Quantity:
+             <input type="number" id="quan" placeholder="1">
+           </div>
+           <div class="color-size">
+             <div class="rang">Color: <p class="color">Pink</p></div>
+             <div class="length">Size: <p class="size">XL</p></div>
+           </div>
+           <div class="line"></div>
+           
+             <div class="whist">
+               <img src="icons/whist.svg" alt="">
+               Save to whistlist
+               <p class="remove">Remove</p>
+             </div>
+           
+         </div>
+         <div class="delivery">
+           <div class="del">
+             <img src="images/deliveryIcon.svg" alt="">
+             Delivery by<p class="date">27th June</p> 
+             | <p class="free">FREE</p>
+           </div>
+         </div>
+       </div>
+       <!--2nd pro-->
+       <div class="product">
+        <div class="img">
+          <img src="images/cart1.jpeg" alt="">
+        </div>
+        <div class="details">
+          <p class="product-name">Vark by Westside Pink Floral A-Line And Palazzos Set</p>
+          <p class="price">₹3299</p>
+          <div class="quantity">
+            Quantity:
+            <input type="number" id="quan" placeholder="1">
+          </div>
+          <div class="color-size">
+            <div class="rang">Color: <p class="color">Pink</p></div>
+            <div class="length">Size: <p class="size">XL</p></div>
+          </div>
+          <div class="line"></div>
+          
+            <div class="whist">
+              <img src="icons/whist.svg" alt="">
+              Save to whistlist
+              <p class="remove">Remove</p>
+            </div>
+          
+        </div>
+        <div class="delivery">
+          <div class="del">
+            <img src="images/deliveryIcon.svg" alt="">
+            Delivery by<p class="date">27th June</p> 
+            | <p class="free">FREE</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img">
+          <img src="images/cart1.jpeg" alt="">
+        </div>
+        <div class="details">
+          <p class="product-name">Vark by Westside Pink Floral A-Line And Palazzos Set</p>
+          <p class="price">₹3299</p>
+          <div class="quantity">
+            Quantity:
+            <input type="number" id="quan" placeholder="1">
+          </div>
+          <div class="color-size">
+            <div class="rang">Color: <p class="color">Pink</p></div>
+            <div class="length">Size: <p class="size">XL</p></div>
+          </div>
+          <div class="line"></div>
+          
+            <div class="whist">
+              <img src="icons/whist.svg" alt="">
+              Save to whistlist
+              <p class="remove">Remove</p>
+            </div>
+          
+        </div>
+        <div class="delivery">
+          <div class="del">
+            <img src="images/deliveryIcon.svg" alt="">
+            Delivery by<p class="date">27th June</p> 
+            | <p class="free">FREE</p>
+          </div>
+        </div>
+      </div>
+     </div>
+     <div class="price-side">
+       <div class="coupon-sec">
+         <div class="coupon">
+           <div class="logoc">
+             <img src="images/coupon-1.7544dbecd2f7.svg" alt="...">
+             Coupon
+           </div>
+           <div class="input">
+             <div>Apply</div>
+           <input type="text" placeholder="eg: masai30" required>
+           </div>
+         </div>
+       </div>
+       <div class="calculation">
+         <div class="base">
+           <div class="free-ship">
+             <div>
+             <img src="images/shipping-truck..svg" alt="">
+             </div>
+             <div>Congratulations!! Your order is eligible for FREE Shipping</div>
+           </div>
+           <div class="linee"></div>
+           <div class="price-des">
+             <div>Bag Total</div>
+             <div class="money">₹ <p class="total">13095.00</p></div>
+           </div>
+           <div class="price-des">
+            <div>Shipping Charge</div>
+            <div class="money free">FREE</div>
+          </div>
+          <div class="price-des">
+            <div>Bag Subtotal</div>
+            <div class="money">₹ <p class="total">13095.00</p></div>
+          </div>
+          <div class="price-des">
+            <div>Product Discount(s)</div>
+            <div class="money">-₹ <p class="total">3420.00</p></div>
+          </div>
+          <div class="save">You will save ₹<div style="display: inline;">3420.00</div> on this order</div>
+          <div class="line" style="margin-top: 30px;"></div>
+          <div class="total-check">
+            <div class="totals">Total <div>₹<p class="tot">9675</p></div></div>
+            <div class="checkout"><a href="checkout.html">checkout</a> </div>
+          </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <footer>
+     <div class="secure">
+       <div class="card">
+         <img src="images/cart_confidence_callout_1.png" alt="">
+         <img src="images/cash.png" alt="">
+         <img src="images/net.png" alt="">
+       </div>
+       <div class="ssl">
+         <img src="/images/slh.png" alt="">
+         <div class="sec-pay">
+           <p class="sec">SSL SECURED PAYMENT</p>
+           <p class="det">Your information is protected by 256-bit SSL encryption</p>
+         </div>
+       </div>
+     </div>
+   </footer>
+ </div>
+ <script src="cart.js"></script>
+</body>
+</html>

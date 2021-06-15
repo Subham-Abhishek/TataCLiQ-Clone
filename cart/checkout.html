@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="icon" href="unnamed.png" type="png">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="wrap">
+        <!--  Navbar starts  -->
+        <div class="nav">
+            <div class="logo">
+                <img src="images/screencapture-tatacliq-2021-05-28-21_43_50.png" alt="">
+            </div>
+            <div class="accounts">
+                <div class="profile-logo">
+                    <div>
+                    <img src="images/profile.39b59dc38fd3.png" alt="" style="width: 25px;height: 25px;">
+                    </div>
+                    <p class="UserName">Abhishek</p>
+                    <img src="images/down-arrow-white.7d24202a27ce.svg" alt="">
+                </div>
+            </div>
+        </div>
+      <!--  Navbar Ends  -->
+
+      <div class="keep">
+        <div class="speech-bubble">
+          <div class="account" onclick="ope()">
+            <img src="icons/profileicon.png" alt="..." style="width: 25px;">My account
+          </div>
+          <div class="account" onclick="ope()">
+            <img src="icons/order-history.a92cd34e19fa.svg" alt="..." style="width: 20px; margin-left: 4px;">Order History
+          </div>
+          <div class="account" onclick="ope()">
+            <img src="icons/whist.svg" alt="..." style="width: 15px; margin-left: 7px;">Saved List
+          </div>
+          <div class="account" onclick="ope()">
+            <img src="icons/alert.89aa376e9ac0.svg" alt="..."style="width: 15px; margin-left:7px ">Alert & Coupon
+          </div>
+          <div class="account" onclick="ope()">
+            <img src="icons/giftCards.c9b393b81026.svg" alt="..." style="width: 20px; margin-left: 1px;">Gift Card
+          </div>
+          <div class="account" onclick="ope()">
+            <img src="icons/cliqCash.89de362374b9.svg" alt="..." style="width: 15px; margin-left: 5px;" >CLiQ Cash
+          </div>
+        </div>
+    </div>
+<br>
+<br>
+    <div class="product-info">
+        <div class="product-side wh">
+            <div class="address-bar">
+                <div class="add">Add Address</div>
+                <div class="clear">Clear All</div>
+            </div>
+            <div class="inputs">
+                <div class="left">
+                    <input type="text" placeholder="Enter your PIN code ">
+                    <input type="text" placeholder="City/district">
+                    <input type="text" placeholder="State">
+                    <input type="text" placeholder="Landmark">
+                </div>
+                <div class="left">
+                    <div class="name">
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="addr">
+                        <input type="text" placeholder="Address">
+                    </div>
+                    <input class="ph-no" type="text" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="check">
+                <input type="radio" id="home" name="ad-type" value="1" checked><label for="home">Home</label>
+                <input type="radio" id="office" name="ad-type" value="2"><label for="office">Office</label>
+            </div>
+        </div>
+        <div class="price-side c">
+          <div class="calculation">
+            <div class="base">
+              <div class="free-ship">
+                <div>
+                <img src="images/shipping-truck..svg" alt="">
+                </div>
+                <div>Congratulations!! Your order is eligible for FREE Shipping</div>
+              </div>
+              <div class="linee"></div>
+              <div class="price-des">
+                <div>Bag Total</div>
+                <div class="money">₹ <p class="total">13095.00</p></div>
+              </div>
+              <div class="price-des">
+               <div>Shipping Charge</div>
+               <div class="money free">FREE</div>
+             </div>
+             <div class="price-des">
+               <div>Bag Subtotal</div>
+               <div class="money">₹ <p class="total">13095.00</p></div>
+             </div>
+             <div class="price-des">
+               <div>Product Discount(s)</div>
+               <div class="money">-₹ <p class="total">3420.00</p></div>
+             </div>
+             <div class="save">You will save ₹<div style="display: inline;">3420.00</div> on this order</div>
+             <div class="line" style="margin-top: 30px;"></div>
+             <div class="total-check">
+               <div class="totals">Total <div>₹<p class="tot">9675</p></div></div>
+               <div class="checkout">Place order</div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
