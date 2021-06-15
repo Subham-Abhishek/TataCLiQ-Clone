@@ -274,6 +274,7 @@ else{
     document.querySelector('.accounts').style.display = "flex"
     document.querySelector('.register').style.display = "none"
     document.querySelector('.logout').style.display = "flex"
+    document.querySelector('.numb').style.display = "flex"
     document.querySelector('.UserName').textContent = JSON.parse(loginData)[0].name;
 
 
