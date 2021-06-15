@@ -907,7 +907,7 @@ span {
 	margin: 15px 0;
 }
 
- form button, div button {
+ form button, .ghost{
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
 	background-color:rgb(255,23,68);
