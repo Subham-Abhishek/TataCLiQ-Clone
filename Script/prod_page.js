@@ -1,8 +1,8 @@
 let changeLayout = document.getElementById("gridLayout");
 function changeGridColumn() {
-    changeLayout.classList.toggle("listLayout");
-    let productsFootwear = document.getElementById('products_footwear');
-    productsFootwear.classList.toggle("narrow_products_footwear");
+  changeLayout.classList.toggle("listLayout");
+  let productsFootwear = document.getElementById('products_footwear');
+  productsFootwear.classList.toggle("narrow_products_footwear");
 }
 
 
@@ -36,6 +36,16 @@ let shoesJSON = [
     rating: "4.1",
     image: "images/shoes-10.jpeg",
     dicount_offer: "45% off",
+    image1: "images/prodInfo/shoesjson1/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson1/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson1/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson1/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson1/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson1/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson1/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson1/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson1/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson1/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -48,6 +58,16 @@ let shoesJSON = [
     rating: "3.8",
     image: "images/shoes-6.jpeg",
     dicount_offer: "45% off",
+    image1: "images/prodInfo/shoesjson2/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson2/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson2/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson2/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson2/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson2/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson2/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson2/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson2/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson2/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -55,11 +75,21 @@ let shoesJSON = [
     brand: "Arrow",
     color: "Brown",
     price: "3599",
-    discounted_price: "1979",
+    discounted_price: "2579",
     description: "Arrow Baldwin Tan Brogue Shoes",
     rating: "4.2",
     image: "images/shoes-1.jpeg",
     dicount_offer: "40% off",
+    image1: "images/prodInfo/shoesjson3/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson3/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson3/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson3/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson3/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson3/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson3/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson3/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson3/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson3/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -72,6 +102,16 @@ let shoesJSON = [
     rating: "4.8",
     image: "images/shoes-3.jpeg",
     dicount_offer: "50% off",
+    image1: "images/prodInfo/shoesjson4/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson4/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson4/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson4/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson4/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson4/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson4/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson4/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson4/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson4/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -84,6 +124,16 @@ let shoesJSON = [
     rating: "3.3",
     image: "images/shoes-8.jpeg",
     dicount_offer: "35% off",
+    image1: "images/prodInfo/shoesjson5/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson5/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson5/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson5/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson5/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson5/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson5/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson5/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson5/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson5/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -96,6 +146,16 @@ let shoesJSON = [
     rating: "4",
     image: "images/shoes-4.jpeg",
     dicount_offer: "40% off",
+    image1: "images/prodInfo/shoesjson6/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson6/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson6/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson6/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson6/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson6/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson6/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson6/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson6/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson6/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -108,6 +168,16 @@ let shoesJSON = [
     rating: "4",
     image: "images/shoes-12.jpeg",
     dicount_offer: "50% off",
+    image1: "images/prodInfo/shoesjson7/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson7/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson7/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson7/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson7/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson7/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson7/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson7/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson7/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson7/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -120,6 +190,16 @@ let shoesJSON = [
     rating: "5",
     image: "images/shoes-7.jpeg",
     dicount_offer: "30% off",
+    image1: "images/prodInfo/shoesjson8/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson8/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson8/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson8/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson8/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson8/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson8/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson8/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson8/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson8/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -132,6 +212,16 @@ let shoesJSON = [
     rating: "4.3",
     image: "images/shoes-5.jpeg",
     dicount_offer: "35% off",
+    image1: "images/prodInfo/shoesjson9/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson9/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson9/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson9/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson9/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson9/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson9/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson9/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson9/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson9/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -144,6 +234,16 @@ let shoesJSON = [
     rating: "2.2",
     image: "images/shoes-9.jpeg",
     dicount_offer: "50% off",
+    image1: "images/prodInfo/shoesjson10/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson10/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson10/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson10/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson10/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson10/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson10/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson10/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson10/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson10/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -156,6 +256,16 @@ let shoesJSON = [
     rating: "4",
     image: "images/shoes-2.jpeg",
     dicount_offer: "40% off",
+    image1: "images/prodInfo/shoesjson11/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson11/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson11/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson11/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson11/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson11/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson11/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson11/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson11/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson11/small/smallshoe5.jpeg",
   },
   {
     category: "Men",
@@ -168,16 +278,27 @@ let shoesJSON = [
     rating: "4",
     image: "images/shoes-11.jpeg",
     dicount_offer: "45% off",
+    image1: "images/prodInfo/shoesjson12/large/shoe1.jpeg",
+    image2: "images/prodInfo/shoesjson12/large/shoe2.jpeg",
+    image3: "images/prodInfo/shoesjson12/large/shoe3.jpeg",
+    image4: "images/prodInfo/shoesjson12/large/shoe4.jpeg",
+    image5: "images/prodInfo/shoesjson12/large/shoe5.jpeg",
+    smallimage1: "images/prodInfo/shoesjson12/small/smallshoe1.jpeg",
+    smallimage2: "images/prodInfo/shoesjson12/small/smallshoe2.jpeg",
+    smallimage3: "images/prodInfo/shoesjson12/small/smallshoe3.jpeg",
+    smallimage4: "images/prodInfo/shoesjson12/small/smallshoe4.jpeg",
+    smallimage5: "images/prodInfo/shoesjson12/small/smallshoe5.jpeg",
   },
 ];
 
-let shoes = document.getElementById("products_footwear")
+let shoes = document.getElementById("products_footwear");
 
 function productFilter(json){
 shoes.innerHTML = null;
+
 json.forEach(function(ele){
     let div = document.createElement("figure");
-    div.innerHTML = `<img src=${ele.image} alt="Shoes">
+    div.innerHTML = `<img class="card-img" src=${ele.image} alt="Shoes">
                      <div class="discountArrow" style="background-image: url(https://www.tatacliq.com/src/general/components/img/offer.95df93e33aa2.svg);">${ele.dicount_offer}</div>
                      <div id="prodName">
                          <h4>${ele.brand}</h4>
@@ -186,6 +307,25 @@ json.forEach(function(ele){
                      <p>${ele.description}</p>
                      <p>&#8377 ${ele.discounted_price} &nbsp;<span>&#8377 ${ele.price}</span></p>
                      <div id="rating">${ele.rating} &#9733</div>`;
+
+                     div.onclick = function () {
+                       let selectedProduct = localStorage.getItem("selectedProduct");
+                       if (selectedProduct == null) {
+                         selectedProduct = [];
+                         selectedProduct.push(ele);
+                         localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
+                         console.log(ele);
+                       }
+                       else{
+                         localStorage.clear()
+                         selectedProduct = [];
+                         selectedProduct.push(ele);
+                         localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
+                         console.log(ele);
+                       }
+                      //  window.location.href = "prodInfo.html";
+                      window.open('prodInfo.html','_blank')
+                     }
     shoes.append(div);
 })
 }
@@ -202,6 +342,18 @@ function black_shoes() {
     productFilter(filteredProduct);
   }
 }
+
+
+// function prodInfo(prod){
+//   let selectedProduct = localStorage.getItem("selectedProduct");
+//   if(selectedProduct == null){
+//     selectedProduct = [];
+//   }
+//   selectedProduct.push(prod);
+//   // selectedProduct = json[prod]
+//   localStorage.setItem("selectedProduct",JSON.stringify(selectedProduct))
+//   console.log(prod);
+// }
 
 
 let selectedField = document.getElementById("selectedField");

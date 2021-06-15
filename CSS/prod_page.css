@@ -111,7 +111,7 @@ h1,
 
 #footwearPage {
   display: flex;
-  width: 90vw;
+  max-width: 87vw;
   height: auto;
   margin: 50px auto;
   /* margin-bottom: 0%; */
@@ -125,7 +125,7 @@ h1,
   display: flex;
   flex-direction: column;
   background-color: white;
-  width: 25%;
+  min-width: 25%;
   border-radius: 10px;
   margin-right: 15px;
   /* margin-top: 10px; */
@@ -270,6 +270,7 @@ h1,
   padding: 0px 10px;
   background-color: #ececec;
   overflow-y: scroll;
+  grid-template-rows: 45;
 }
 .narrow_products_footwear {
   grid-template-columns: repeat(4, 1fr) !important;
@@ -279,6 +280,7 @@ h1,
   background-color: #ececec;
   border-radius: 8px;
   position: relative;
+  cursor: pointer;
 }
 #products_footwear > figure p,
 #products_footwear > figure > div {
@@ -341,11 +343,14 @@ h1,
   border: 2px solid #ececec;
 }
 
-img {
+.card-img {
   width: 100%;
   border-radius: 5px;
-  /* height: 400px; */
+  /* height: 380px; */
   margin-bottom: 10px;
+}
+.small-card-img{
+  height: 300px !important;
 }
 span {
   text-decoration: line-through;

@@ -1,0 +1,350 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#prod_info{
+    width: 80vw;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid rebeccapurple; */
+}
+#discount_arrow{
+    width: 125px;
+    height: 45px;
+    background: url(https://www.tatacliq.com/src/general/components/img/offer.95df93e33aa2.svg);
+    background-size: contain;
+    position: absolute;
+    top: 100;
+    left: 80;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+#prod_carousel{
+    width: 47%;
+    margin-right: 0px;
+}
+
+#prod_carousel > img {
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    /* border: 1px solid tan; */
+}
+
+.small_img{
+    display: flex;
+    justify-content: left;
+}
+.small_img_row{
+    width: 20%;
+    margin-left: 0;
+}
+.small_img_row img{
+    width: 60%;
+    margin-right: 0px;
+    opacity: 0.6;
+    /* border: 1px solid red; */
+}
+
+#prod_details{
+    width: 50%;
+    /* border: 1px solid red; */
+}
+
+#breadcrumbs {
+    width: auto;  
+    font-size: 11px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    text-overflow: ellipsis;
+    position: absolute;
+    left: 49vw;
+    top: 65px;
+    color: #afafaf;
+    padding-left: 0%;
+    text-overflow: ellipsis;
+}
+
+#breadcrumbs div {
+    width: 12px;
+    height: 12px;
+    background: url(https://www.tatacliq.com/src/pdp/components/img/arrow.bce965cf106a.svg);
+    background-size: cover;
+}
+#brand{
+    margin-top: 5px;
+    font-size: 20px
+}
+#description{
+    font-size: 21px;
+    font-weight: 300;
+    margin-top: 0;
+}
+#pricing{
+    font-size: 21px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+#pricing strike{
+    font-weight: 300;
+}
+#pricing span{
+    color: #ff2d4a;
+    font-weight: 300;
+}
+#free_shipping_details{
+    font-size: 14px;
+    margin-top: 8px;
+    color: #ff2d4a;
+}
+#coupons{
+    list-style: none;
+    padding-left: 25px;
+}
+#coupons a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 300;
+}
+#size_selection p{
+    font-size: 15px;
+    font-weight: 600;
+}
+#size_selection button{
+    border-radius: 25px;
+    background: #ffffff;
+    height: 40px;
+    width: 90px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 13%);
+    border: transparent;
+    font-weight: 700;
+}
+
+#size_selection a{
+    color: #ff2d4a;
+    margin-left: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #ff2d4a;
+}
+
+#size_selection button:focus{
+    background-color: black;
+    color: white;
+    transition: 1s ease-out;
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 53%);
+}
+
+#similar_stocks{
+    font-size: 14px;
+}
+#similar_stocks span{
+    color: #ff2d4a;
+}
+#prod_color{
+    font-size: 14px;
+    margin-bottom: -10px;
+}
+.colour{
+    margin-bottom: 25px;
+}
+
+#prod_color div{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: 0 1px 5px rgb(60, 60, 60);
+    position: relative;
+    top: -10px;
+    left: 5px;
+    margin-bottom: 15px;
+    border: 4px solid white;
+    cursor: pointer;
+}
+#prod_color img{
+    width: 15px;
+    position: relative;
+    top: -48px;
+    left: 14px;
+    cursor: pointer;
+}
+#buy_now, #add_to_bag, #go_to_bag{
+    width: 180px;
+    height: 50px;
+    margin-right: 40px;
+    border-radius: 25px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 24%), 0 0 2px 0 rgb(0 0 0 / 12%);
+    border: transparent;
+    margin-bottom: 10px;
+}
+#buy_now{
+    background: #dc215f;
+    color: white;
+    font-weight: 600;
+}
+#add_to_bag, #go_to_bag{
+    color: #ff2d4a;
+    font-weight: 600;
+    border: 2px solid #ff2d4a;
+}
+#go_to_bag{
+    display: none;
+}
+#buy_now:hover, #add_to_bag:hover, #go_to_bag:hover{
+    transition: 400ms;
+    box-shadow: 0 8px 8px 0 rgb(0 0 0 / 40%), 0 0 2px 0 rgb(0 0 0 / 20%);
+}
+#seller{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 15px 0 35px 0;
+}
+#seller span{
+    font-weight: 600;
+}
+#delievery{
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+#delievery span{
+    font-weight: 500;
+}
+#delievery div{
+    width: 45px;
+    height: 30px;
+    margin-right: 15px;
+    background: url(https://www.tatacliq.com/src/general/components/img/deliveryIcon.8066fe78f20f.svg);
+    background-size: cover;
+}
+#payment{
+    display: flex;
+    align-items: center;
+}
+#payment div:first-child{
+    width: 45px;
+    height: 30px;
+    margin-right: 15px;
+    background: url(https://www.tatacliq.com/src/general/components/img/cod.9359a21bd78a.svg);
+    background-size: contain;
+}
+#payment_details {
+    line-height: 6px;
+    font-weight: 300;
+}
+#payment_details p:last-child{
+    font-size: 13px;
+}
+#extra{
+    height: auto;
+    background-color: #e2e2e2;
+    padding: 40px 0;
+}
+#detailed_description{
+    width: 85vw;
+    margin: auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    /* border: 2px solid red; */
+}
+#detailed_description p{
+    padding: 30px;
+    padding-top: 10px;
+    font-weight: 300;
+}
+.collapsible {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+}
+
+.content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+main{
+    width: 100%;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    background-color: #e2e2e2;
+}
+
+#similar_prod_heading{
+    padding-left: 90px;
+}
+
+.scroller {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: absolute;
+  top: 8%;
+  font-size: 60px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding-left: 10px;
+  color: gray;
+  transform: rotate(180Deg);
+  left: 88.5%;
+  background: #ffffff;
+  border-radius: 0 15px 15px 0;
+}
+.scroller:nth-of-type(2) {
+    left: 92%;
+    text-align: right;
+    transform: rotate(0Deg);
+}
+.scroller div{
+  width: 20px;
+  height: 20px;
+  background: url(https://www.tatacliq.com/src/general/components/img/arrow.728e31d0944a.svg);
+  background-size: contain;
+}
+#similar_products_carousel {
+    width: 89%;
+    background-color: #e2e2e2;
+    margin: 10px auto;
+    display: flex;
+    overflow-x: auto;
+}
+#similar_products_carousel::-webkit-scrollbar{
+    visibility: hidden;
+}
+.caraousel_images{
+    min-width: 300px;
+    position: relative;
+    left: 0;
+    text-align: center;
+    transition: 0.5s;
+}
+.caraousel_images img{
+  width: 95%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
