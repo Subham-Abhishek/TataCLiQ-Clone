@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="payment.css">
 </head>
 <body>
+  <div class="ani"></div>
     <div class="wrap">
         <!--  Navbar starts  -->
         <div class="nav">
@@ -20,7 +21,7 @@
                     <div>
                     <img src="images/profile.39b59dc38fd3.png" alt="" style="width: 25px;height: 25px;">
                     </div>
-                    <p class="UserName">Abhishek</p>
+                    <p class="UserName">Login / SignUp</p>
                     <img src="images/down-arrow-white.7d24202a27ce.svg" alt="">
                 </div>
             </div>
@@ -71,19 +72,66 @@
                 <img src="icons/greenchek.svg" alt="">Delivery Mode
             </div>
             <div class="home f" id="push">
-                <!-- <div class="margin">
-                    <p>Utsa by Westside Charcoal Hexagonal Pattern Straight Kurta: <p class="dark">Delivery by 2nd Jul</p></p> 
-                  </div>
-                  <div>
-                    <p>Utsa by Westside Charcoal Hexagonal Pattern Straight Kurta: <p class="dark">Delivery by 2nd Jul</p></p> 
-                  </div> -->
+               
             </div>
           </div>    
           <div class="pay">
             <div class="title">
                 <img src="icons/greenchek.svg" alt="">Payment Mode
             </div>
-          </div>    
+            <div class="pat-meth">
+              <div class="debit">
+               <div class="tag">
+                <img src="icons/debit-card.6e017e5ce6cd.svg" alt=""> Debit Card
+               </div>
+                <div class="inputs">
+                  <div class="left">
+                    <input type="text" placeholder="Card Number">
+                    <input type="text" placeholder="Name on Card">
+                  </div>
+                  <div class="right">
+                    <div class="select" >
+                      <select name="month" id="month">
+                        <option value="" disabled selected>Expiry Month</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+
+                      <select name="year" id="year">
+                        <option value="" disabled selected>Expiry Year</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                      </select>
+                    </div>
+                    <div style="display: flex; width: 100%;">
+                      <input type="text" name="cvv" id="cvv" placeholder="CVV">
+                      <div class="checkout" onclick="send()">Place order</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              <br>
+              <br>
         </div>
         
         <div class="price-side c">
@@ -110,8 +158,8 @@
              <div class="save">You will save ₹<div id="f2" style="display: inline;">3420.00</div> on this order</div>
              <div class="line" style="margin-top: 30px;"></div>
              <div class="total-check">
-               <div class="totals">Total <div>₹<p id="tott">975</p></div></div>
-               <div class="checkout" onclick="send()">Place order</div>
+               <div class="totals">Total Payable </div>
+               <div class="rs">₹<p id="tott">975</p>.00</div>
              </div>
             </div>
           </div>

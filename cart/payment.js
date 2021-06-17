@@ -23,3 +23,13 @@ for (let i = 0; i < data1.length; i++) {
    div.innerHTML = `<p>${data1[i].description}: <p class="dark">Delivery by 2nd Jul</p></p>`
     f.append(div)
 }
+function send(){
+    document.querySelector('.ani').style.display = 'block'
+    setTimeout(() => {
+        window.location.href = "success.html"
+    }, 1500);
+}
+
+var login = JSON.parse(localStorage.getItem('loginData'))[0]
+console.log(login);
+document.querySelector('.UserName').innerHTML = login.name
