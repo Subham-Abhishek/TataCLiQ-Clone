@@ -7,7 +7,7 @@ body{
 .wrap{
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-color: rgb(236,236,236);
 }
 .nav{
@@ -446,7 +446,8 @@ b{
     background-color: rgb(255,23,68);
     margin-bottom: 60px;
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 24%), 0 0 2px 0 rgb(0 0 0 / 12%);
-
+    cursor: pointer;
+    width: 170px;
 }
 .checkout a{
     text-decoration: none;
@@ -505,6 +506,7 @@ b{
     width: 250px;
     display: flex;
     justify-content: space-between;
+    padding-left: 20px;
 }
 #home{
     margin-left: 20px;
@@ -516,9 +518,75 @@ b{
 label{
     margin-right: 50px;
 }
-.checkout{
-    cursor: pointer;
+
+.checkout:hover{
+    box-shadow: 0 8px 8px 0 rgb(0 0 0 / 40%), 0 0 2px 0 rgb(0 0 0 / 20%);
+    transition: 300ms;
 }
 .c{
     margin-top: -20px;
 }
+
+/* Custom Radio Button Start*/
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+  background: url(https://www.tatacliq.com/src/general/components/img/checkbox-tick.8aa2e5c9601b.svg);
+  background-size: cover;
+}
+
+.container .checkmark:after {
+ 	top: 0px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: url(https://www.tatacliq.com/src/general/components/img/checkbox-tick.8aa2e5c9601b.svg);
+}
+
+/* Custom Radio Button Ends */

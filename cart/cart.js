@@ -176,3 +176,6 @@ function rem(idy){
   localStorage.setItem('bagItem',JSON.stringify(bagItem))
   location.reload();
 }
+
+let loggedIn = JSON.parse(localStorage.getItem("loginData"));
+document.querySelector(".UserName").textContent = loggedIn[0].name;

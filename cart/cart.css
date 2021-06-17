@@ -454,6 +454,10 @@ b{
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 24%), 0 0 2px 0 rgb(0 0 0 / 12%);
 
 }
+.checkout:hover{
+    box-shadow: 0 8px 8px 0 rgb(0 0 0 / 40%), 0 0 2px 0 rgb(0 0 0 / 20%);
+    transition: 300ms;
+}
 .checkout a{
     text-decoration: none;
     color: white;

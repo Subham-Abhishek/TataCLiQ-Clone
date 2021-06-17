@@ -341,3 +341,7 @@ function pre() {
        le = 4;
       }
 }
+window.addEventListener("resize", changequery);
+function changequery() {
+  location.reload();
+}

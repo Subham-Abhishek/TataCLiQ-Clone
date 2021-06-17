@@ -262,7 +262,7 @@ opacity: 0;
     color: rgb(33,33,33);
 }
 .dropdowns .category:hover .img{
-    background-image: url(https://www.tatacliq.com/src/general/components/img/down-arrow.288db0f16207.svg);
+    background-image: url(../icons/down-arrow.288db0f16207.svg);
     transform: rotate(180deg);
     transition: 300ms;
     margin-left: 0.313rem;
@@ -283,7 +283,7 @@ opacity: 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 13px 13px;
-    background-image: url(https://www.tatacliq.com/src/general/components/img/down-arrow-white.7d24202a27ce.svg);
+    background-image: url(../icons/down-arrow-white.7d24202a27ce.svg);
     padding-left: 0.2rem;
     padding-top: 0.2rem;
     transform: rotate(0);
@@ -296,7 +296,7 @@ opacity: 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 15px 13px;
-    background-image: url(https://www.tatacliq.com/src/general/components/img/down-arrow-white.7d24202a27ce.svg);
+    background-image: url(../icons/down-arrow-white.7d24202a27ce.svg);
     padding-left: 0.2rem;
     padding-top: 0.2rem;
     transform: rotate(0);
@@ -307,7 +307,7 @@ opacity: 0;
     color: rgb(33,33,33);
 }
 .dropdowns .brands:hover .imgg{
-    background-image: url(https://www.tatacliq.com/src/general/components/img/down-arrow.288db0f16207.svg);
+    background-image: url(../icons/down-arrow.288db0f16207.svg);
     transform: rotate(180deg);
     transition: 300ms;
 }
