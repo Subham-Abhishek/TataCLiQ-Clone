@@ -1,4 +1,19 @@
 
+var inputKey = ""
+ function myFunction(e){
+     inputKey+=e.key 
+   console.log(inputKey);
+ }
+   
+   var x = localStorage.getItem('bagItem')
+    if(x==null){
+      
+    }
+    else{
+     document.querySelector('.numb').style.display = 'flex'
+     x = JSON.parse(localStorage.getItem('bagItem'))
+     document.querySelector('.numb').innerHTML = x.length
+     }
     let span = document.getElementsByClassName("scroller");
     let div = document.getElementsByClassName('caraousel_images');
     let l = 0;
@@ -274,7 +289,7 @@ else{
     document.querySelector('.accounts').style.display = "flex"
     document.querySelector('.register').style.display = "none"
     document.querySelector('.logout').style.display = "flex"
-    document.querySelector('.numb').style.display = "flex"
+    // document.querySelector('.numb').style.display = "flex"
     document.querySelector('.UserName').textContent = JSON.parse(loginData)[0].name;
 
 
@@ -286,3 +301,26 @@ function logout(){
     location.reload()
 }
 
+//mobile nav
+var count  = 0;
+document.querySelector('.ham').addEventListener('click',function(){
+    if(count%2==0){
+        document.querySelector('.mob-nav').style.opacity = 1
+    document.querySelector('.header').style.height = '280'+'px'
+    }
+    else{
+        document.querySelector('.mob-nav').style.opacity = 0 
+    document.querySelector('.header').style.height = '60'+'px'
+    }
+    count++
+})
+
+
+// const mediaQuery = window.matchMedia('(min-width: 100px)')
+// // Check if the media query is true
+// if (mediaQuery.matches) {
+//     document.querySelector('.header').style.height = '100'+'px'
+
+//   // Then trigger an alert
+  
+// }

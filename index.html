@@ -20,6 +20,15 @@
       <div class="logo">
         <img src="images/screencapture-tatacliq-2021-05-28-21_43_50.png" alt="">
       </div>
+      <!-- responsive nav -->
+      <div class="mob-nav">
+        <div>Women's Fashion</div>
+        <div>Mans Fashion</div>
+        <div>Kid's Fashion</div>
+        <div>Electronics</div>
+        <div class="mob-sign" onclick="ope()">Sign In / SignUp</div>
+      </div>
+      <!-- responsive nav -->
       <div class="nav-right">
         <div class="up-nav">
           <div class="tata-luxury-page">
@@ -88,7 +97,7 @@
                 <!--  sub category sub values   -->
                 <div class="sub-category-option ">
                   <section class="show">
-                    <div class="sub-category-option-header" onclick="location.href='#'" >Ethnic Wear</div>
+                    <div class="sub-category-option-header"  >Ethnic Wear</div>
                     <div class="sub-category-option-value">Kurtas & Kurtis</div>
                     <div class="sub-category-option-value">Suits Sets</div>
                     <div class="sub-category-option-value">Sarees</div>
@@ -154,7 +163,7 @@
                     <div class="sub-category-option-header">Footwear</div>
                     <div class="sub-category-option-value">Casual Shoes</div>
                     <div class="sub-category-option-value">Sneakers</div>
-                    <div class="sub-category-option-value">Formal Shoes</div>
+                    <div class="sub-category-option-value" onclick="location.href='prodPage.html'">Formal Shoes</div>
                     <div class="sub-category-option-value">Training Shoes</div>
                     <div class="sub-category-option-value">Running Shoes</div>
                     <div class="sub-category-option-value">Sports Shoes</div>
@@ -954,7 +963,7 @@
               </div>
             </div>
             <div class="search">
-              <input type="text" id="search-expand" autocomplete="off" placeholder="Search">
+              <input type="text" id="search-expand" onkeydown="myFunction(event)" autocomplete="off" placeholder="Search">
               <div class="search-icon">
                 <img src="images/home page/searchwhite.svg" alt="">
               </div>
@@ -1108,7 +1117,7 @@
         <img src="images/home page/topbanner (2).jpg" alt="">
       </a>
     </div>
-    <div class="banner new">
+    <div class="new">
         <a href="#">
             <img src="images/home page/29705409232926.jpg" alt="">
         </a>

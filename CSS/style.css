@@ -419,7 +419,10 @@ opacity: 0;
 }
 .carousel-control-prev-icon{
    transform: rotate(180deg);
-   background-image:url(https://www.tatacliq.com/src/general/components/img/arrow.728e31d0944a.svg);
+   background-image:url(../icons/arrowcarousel.svg);
+}
+a>img{
+    transform: none !important;
 }
 .carousel-control-next{
     width: 66px;
@@ -431,7 +434,7 @@ opacity: 0;
     background-color: rgb(216, 216, 216)
 }
 .carousel-control-next-icon{
-    background-image:url(https://www.tatacliq.com/src/general/components/img/arrow.728e31d0944a.svg);
+    background-image:url(../icons/arrowcarousel.svg);
 }
 
 .yesBankBanner{
@@ -450,6 +453,7 @@ opacity: 0;
     width: 90%;
     margin: auto;
     margin-top:  1%;
+    border: 1px solid;
     margin-bottom: 4.5%;
 }
 .banner img{
@@ -469,7 +473,14 @@ opacity: 0;
     /* padding: 5px /10px; */
 }
 .new{
-   margin-top: -90px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    border: 1px solid;
+}
+.new> a > img{
+   width: 100%;
+   margin: auto;
 }
 .new-on-click img{
     width: 100%;
@@ -499,6 +510,9 @@ opacity: 0;
 .slide{
     height: 27.5vw;
     /* border: 1px solid;   */
+ }
+ .mob-nav{
+     display: none;
  }
 .ham{
     position: absolute;
@@ -531,16 +545,268 @@ opacity: 0;
     background-color: white;
     transition: 200ms ease-in-out;
 }
- @media only screen and (max-width: 900px) {
+ @media only screen and (max-width: 990px) {
     .logo.reduce{
         padding: 0;
         padding-top: 4vh;
         padding-left: 6%;
+       }
+       .overlay-panel p {
+        font-size: 14px;
+        font-weight: 100;
+        /* line-height: 20px; */
+        letter-spacing: 0.5px;
+        margin: 20px 0 30px;
+    }
+    
+    span {
+        font-size: 14px;
+    }
+    
+     .cover a {
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 15px 0;
+    }
+    
+     form button, .ghost{
+        border-radius: 20px;
+        border: 1px solid #FF4B2B;
+        background-color:rgb(255,23,68);
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+    }
+    
+    form button:active, .ghost:active {
+        transform: scale(0.95);
+    }
+    
+    form button:focus, .ghost:focus {
+        outline: none;
+    }
+    
+    .ghost {
+        background-color: transparent;
+        border-color: #FFFFFF;
+    }
+    
+    form {
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 50px;
+        height: 100%;
+        text-align: center;
+    }
+    
+    form input {
+        background-color: #eee;
+        border: none;
+        padding: 12px 15px;
+        margin: 8px 0;
+        width: 100%;
+    }
+    .cover{
+        width: 100%;
+        display: none;
+        height: 50vh;
+        position: static !important;
+        z-index: 200;
+        background-color: rgba(0,0,0,0.22);
+    }
+    .container {
+        background-color: #fff;
+        border-radius: 10px;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                0 10px 10px rgba(0,0,0,0.22);
+        position:static !important;
+        overflow: hidden;
+        width: 40vw !important;
+        left: 20%;
+        top: 20%;
+        max-width: 100%;
+        min-height: 480px;
+        z-index: 200;
+    }
+    
+    .form-container {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: all 0.6s ease-in-out;
+    }
+    
+    .sign-in-container {
+        left: 0;
+        width: 50%;
+        z-index: 2;
+    }
+    
+    .container.right-panel-active .sign-in-container {
+        transform: translateX(100%);
+    }
+    
+    .sign-up-container {
+        left: 0;
+        width: 50%;
+        opacity: 0;
+        z-index: 1;
+    }
+    
+    .container.right-panel-active .sign-up-container {
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 5;
+        animation: showe 0.6s;
+    }
+    
+    @keyframes showe {
+        0%, 49.99% {
+            opacity: 0;
+            z-index: 1;
+        }
+        
+        50%, 100% {
+            opacity: 1;
+            z-index: 5;
+        }
+    }
+    
+    .overlay-container {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        transition: transform 0.6s ease-in-out;
+        z-index: 100;
+    }
+    
+    .container.right-panel-active .overlay-container{
+        transform: translateX(-100%);
+    }
+    
+    .overlay {
+        
+        background:rgb(33,33,33);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        color: #FFFFFF;
+        position: relative;
+        left: -100%;
+        height: 100%;
+        width: 200%;
+          transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+    }
+    
+    .container.right-panel-active .overlay {
+          transform: translateX(50%);
+    }
+    
+    .overlay-panel {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+    }
+    
+    .overlay-left {
+        transform: translateX(-20%);
+    }
+    
+    .container.right-panel-active .overlay-left {
+        transform: translateX(0);
+    }
+    
+    .overlay-right {
+        right: 0;
+        transform: translateX(0);
+    }
+    
+    .container.right-panel-active .overlay-right {
+        transform: translateX(20%);
+    }
+    
+    .social-container {
+        margin: 20px 0;
+    }
+    
+    .social-container a {
+        border: 1px solid #DDDDDD;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        height: 40px;
+        width: 40px;
+    }
+    .bb{
+        transform: translatex(-40px);
+        position:static !important;
+        /* margin-top: -120px; */
+        margin-bottom: 70px;
+        /* margin-right: -380px; */
+        cursor: pointer;
+        transition: 300ms ease-in-out;
+    }
+    .bd{
+        transform: translatex(-40px);
+        cursor: pointer;
+        margin-right: -320px;
+        transition: 300ms ease-in-out;
+    }
+    .bd:hover,.bb:hover{
+        transform:none !important;
+        /* transition: all 300ms ease-in-out; */
     }
        .header{
            height: 60px;
            display: flex;
+           transition: 400ms ease-in-out;
+       }
+       .mob-nav{
+           /* position: relative; */
+           width: 70%;
+           color: white;
+           display: flex;
+           opacity: 0;
+           /* text-align: center; */
+           flex-direction: column;
+           justify-content:space-around;
            align-items: center;
+           transition:all 400ms ease-in-out;
+
+       }
+       .mob-nav div{
+           width: 150px;
+           cursor: pointer;
+           height: 30px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           border-radius: 10px;
+           background-color: rgb(50, 50, 50);
        }
        .nav-right{
            display: none;
@@ -551,8 +817,9 @@ opacity: 0;
            margin-top: -15px !important;
        }
        .ham{
+           top: 15px;
            display: flex;
-       }
+                  }
    }
 @media only screen and (max-width: 600px) {
     .logo.reduce{
@@ -725,12 +992,14 @@ section div{
     height: auto;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     line-height: 120px;
 }
 .trust-component{
     width: 25%;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
 
@@ -762,6 +1031,7 @@ section div{
     margin: auto;
     padding: 45px 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 .link-holder{
@@ -774,6 +1044,7 @@ section div{
     width: 33.33%;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 .linkHeader{
@@ -799,6 +1070,7 @@ section div{
     width: 40%;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 .containers{
@@ -812,12 +1084,14 @@ section div{
     max-width: 1200px;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 .downloadApp{
     width: 25%;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
 }
@@ -828,12 +1102,14 @@ section div{
     font-size: 14px;
     font-weight: 100;
     display: flex;
+    flex-wrap: wrap;
     margin-right: 15px;
 }
 .appIconHolder{
     width: 20px;
     height: 20px;
     display: flex;
+    flex-wrap: wrap;
     margin-right: 10px;
     cursor: pointer;
 }
@@ -841,6 +1117,7 @@ section div{
     width: 50%;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -849,6 +1126,7 @@ section div{
     width: 25%;
     height: 100%;
     display: flex;
+    flex-wrap: yyy;
     justify-content: flex-end;
     align-items: center;
     color: #212121;
@@ -1020,6 +1298,7 @@ form input {
 .overlay-container {
 	position: absolute;
 	top: 0;
+    text-align: center;
 	left: 50%;
 	width: 50%;
 	height: 100%;

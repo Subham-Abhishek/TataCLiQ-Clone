@@ -66,107 +66,18 @@
    <div class="info">
     Apply a relevant <b>coupon code</b> here to avail any additional discount. Applicable <b>cashback</b> if any will be credited to your account as per T&C.
    </div>
+   <div class="empty">
+     <img src="/cart/images/emptycard.png" alt="">
+     <div>Your bag is empty! Let’s fill it up shall we?</div>
+     <div class="conti">
+       <div class="continue">Continue Shopping</div>
+       <div id="saved">View Saved Products</div>
+     </div>
+   </div>
    <div class="product-info">
      <div class="product-side">
-       <div class="product">
-         <div class="img">
-           <img src="images/cart1.jpeg" alt="">
-         </div>
-         <div class="details">
-           <p class="product-name">Vark by Westside Pink Floral A-Line And Palazzos Set</p>
-           <p class="price">₹3299</p>
-           <div class="quantity">
-             Quantity:
-             <input type="number" id="quan" placeholder="1">
-           </div>
-           <div class="color-size">
-             <div class="rang">Color: <p class="color">Pink</p></div>
-             <div class="length">Size: <p class="size">XL</p></div>
-           </div>
-           <div class="line"></div>
-           
-             <div class="whist">
-               <img src="icons/whist.svg" alt="">
-               Save to whistlist
-               <p class="remove">Remove</p>
-             </div>
-           
-         </div>
-         <div class="delivery">
-           <div class="del">
-             <img src="images/deliveryIcon.svg" alt="">
-             Delivery by<p class="date">27th June</p> 
-             | <p class="free">FREE</p>
-           </div>
-         </div>
-       </div>
-       <!--2nd pro-->
-       <div class="product">
-        <div class="img">
-          <img src="images/cart1.jpeg" alt="">
-        </div>
-        <div class="details">
-          <p class="product-name">Vark by Westside Pink Floral A-Line And Palazzos Set</p>
-          <p class="price">₹3299</p>
-          <div class="quantity">
-            Quantity:
-            <input type="number" id="quan" placeholder="1">
-          </div>
-          <div class="color-size">
-            <div class="rang">Color: <p class="color">Pink</p></div>
-            <div class="length">Size: <p class="size">XL</p></div>
-          </div>
-          <div class="line"></div>
-          
-            <div class="whist">
-              <img src="icons/whist.svg" alt="">
-              Save to whistlist
-              <p class="remove">Remove</p>
-            </div>
-          
-        </div>
-        <div class="delivery">
-          <div class="del">
-            <img src="images/deliveryIcon.svg" alt="">
-            Delivery by<p class="date">27th June</p> 
-            | <p class="free">FREE</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="img">
-          <img src="images/cart1.jpeg" alt="">
-        </div>
-        <div class="details">
-          <p class="product-name">Vark by Westside Pink Floral A-Line And Palazzos Set</p>
-          <p class="price">₹3299</p>
-          <div class="quantity">
-            Quantity:
-            <input type="number" id="quan" placeholder="1">
-          </div>
-          <div class="color-size">
-            <div class="rang">Color: <p class="color">Pink</p></div>
-            <div class="length">Size: <p class="size">XL</p></div>
-          </div>
-          <div class="line"></div>
-          
-            <div class="whist">
-              <img src="icons/whist.svg" alt="">
-              Save to whistlist
-              <p class="remove">Remove</p>
-            </div>
-          
-        </div>
-        <div class="delivery">
-          <div class="del">
-            <img src="images/deliveryIcon.svg" alt="">
-            Delivery by<p class="date">27th June</p> 
-            | <p class="free">FREE</p>
-          </div>
-        </div>
-      </div>
-     </div>
+       
+     </div> 
      <div class="price-side">
        <div class="coupon-sec">
          <div class="coupon">
@@ -175,8 +86,8 @@
              Coupon
            </div>
            <div class="input">
-             <div>Apply</div>
-           <input type="text" placeholder="eg: masai30" required>
+             <div onclick="coupon(20)">Apply</div>
+           <input id="coupe" type="text" placeholder="eg: masai20" required>
            </div>
          </div>
        </div>
@@ -203,13 +114,13 @@
           </div>
           <div class="price-des">
             <div>Product Discount(s)</div>
-            <div class="money">-₹ <p class="total">3420.00</p></div>
+            <div class="money">-₹ <p class="total" id="dif">3420.00</p></div>
           </div>
-          <div class="save">You will save ₹<div style="display: inline;">3420.00</div> on this order</div>
+          <div class="save">You will save ₹<div id="fl" style="display: inline;">3420.00</div> on this order</div>
           <div class="line" style="margin-top: 30px;"></div>
           <div class="total-check">
-            <div class="totals">Total <div>₹<p class="tot">9675</p></div></div>
-            <div class="checkout"><a href="checkout.html">checkout</a> </div>
+            <div class="totals">Total <div>₹<p class="tot"></p></div></div>
+            <div class="checkout"  onclick="location.href='checkout.html'">checkout </div>
           </div>
          </div>
        </div>
@@ -232,6 +143,9 @@
      </div>
    </footer>
  </div>
+
+
  <script src="cart.js"></script>
 </body>
 </html>
+

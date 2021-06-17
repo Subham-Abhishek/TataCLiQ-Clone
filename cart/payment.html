@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title>Proceed with Payment</title>
     <link rel="icon" href="unnamed.png" type="png">
-    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="payment.css">
 </head>
 <body>
     <div class="wrap">
@@ -51,45 +51,46 @@
     </div>
 <br>
 <br>
+   <h1>Checkout</h1>
     <div class="product-info">
-        <div class="product-side wh">
-            <div class="address-bar">
-                <div class="add">Add Address</div>
-                <div class="clear">Clear All</div>
+        <div class="product-side">
+          <div class="address-side">
+              <div class="title">
+                  <img src="icons/greenchek.svg" alt="">Delivery Address
+              </div>
+              <div class="home">
+               <h4>Home</h4>
+               <p class="ad">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+               <p class="ci">Aurangabad</p>
+               <p class="st">Bihar,<p class="pi">824101</p></p>
+               <p class="ph">7992245309</p>
+              </div>
+          </div>    
+          <div class="status">
+            <div class="title">
+                <img src="icons/greenchek.svg" alt="">Delivery Mode
             </div>
-            <div class="inputs">
-                <div class="left">
-                    <input type="text" class="pin" placeholder="Enter your PIN code ">
-                    <input type="text" class="city" placeholder="City/district">
-                    <input type="text" class="state" placeholder="State">
-                    <input type="text" placeholder="Landmark">
-                </div>
-                <div class="left">
-                    <div class="name">
-                        <input type="text" placeholder="First Name">
-                        <input type="text" placeholder="Last Name">
-                    </div>
-                    <div class="addr">
-                        <input type="text" class="adde" placeholder="Address">
-                    </div>
-                    <input class="ph-no" type="text" placeholder="Phone Number">
-                </div>
+            <div class="home f" id="push">
+                <!-- <div class="margin">
+                    <p>Utsa by Westside Charcoal Hexagonal Pattern Straight Kurta: <p class="dark">Delivery by 2nd Jul</p></p> 
+                  </div>
+                  <div>
+                    <p>Utsa by Westside Charcoal Hexagonal Pattern Straight Kurta: <p class="dark">Delivery by 2nd Jul</p></p> 
+                  </div> -->
             </div>
-            <div class="check">
-                <input type="radio" class="radio" id="home" name="ad-type" value="1" checked><label for="home">Home</label>
-                <input type="radio" class="radio" id="office" name="ad-type" value="2"><label for="office">Office</label>
+          </div>    
+          <div class="pay">
+            <div class="title">
+                <img src="icons/greenchek.svg" alt="">Payment Mode
             </div>
+          </div>    
         </div>
+        
         <div class="price-side c">
           <div class="calculation">
             <div class="base">
-              <div class="free-ship">
-                <div>
-                <img src="images/shipping-truck..svg" alt="">
-                </div>
-                <div>Congratulations!! Your order is eligible for FREE Shipping</div>
-              </div>
-              <div class="linee"></div>
+             
+             
               <div class="price-des">
                 <div>Bag Total</div>
                 <div class="money">₹ <p class="total">13095.00</p></div>
@@ -119,6 +120,6 @@
        
     </div>
    
-    <script src="checkout.js"></script>
+<script src="payment.js"></script>
 </body>
 </html>

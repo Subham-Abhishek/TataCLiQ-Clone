@@ -170,15 +170,6 @@ body{
 .profile-logo input::placeholder{
     font-size: 14px;
 }
-/* produvt info*/
-.info{
-    display: none;
-    max-width: 1200px;
-    margin: auto;
-    font-weight: 400;
-    color: rgb(30,30,30);
-    margin: 25px auto 25px auto;
-}
 b{
     font-weight: 500 ;
 }
@@ -187,8 +178,8 @@ b{
     max-width: 1200px;
     height: auto;
     margin: auto;
-    display: none;
-    flex-direction: row-reverse;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     /* margin-top: 60px; */
     /* background-color: white; */
@@ -241,7 +232,10 @@ b{
     text-decoration: line-through;
     color: grey;
 }
-
+.quantity{
+    color:rgb(33,33,33);
+    font-family:Arial, Helvetica, sans-serif;
+}
 #quan{
     width: 60px;
     border: none;
@@ -458,123 +452,73 @@ b{
     text-decoration: none;
     color: white;
 }
-/*footer*/
-footer{
-    display: none;
+.wh{
+    background-color: white;
+}
+.inputs{
     width: 100%;
-    height: 140px;
-    padding-top: 30px;
-    background-color: white;
+    display: flex;
 }
-.secure{
+.left{
     width: 50%;
-    margin-left: 70px;
-    height: auto;
-}
-.ssl{
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
-}
-.sec-pay{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    /* align-items: center; */
+    padding: 20px;
 }
-.sec{
-    font-weight: 400;
+.left input{
+    height: 30px;
+    margin-bottom: 35px;
 }
-.det{
-    font-size: 12px;
-}
-.sec-pay p{
-    margin: 0;
-}
-/*  checkout  */
-
-.empty{
-    width: 88% !important;
-    height: 70vh;
-    margin: auto;
-    margin-top: 30px;
-    width: 800px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start;
-    align-items: center; 
-    
-}
-.empty img{
-    width: 200px;
-    margin-top: 40px;
-}
-.empty img+div{
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 50px;
-}
-.conti{
-    width: 35%;
-    height: 40px;
-    display: flex;
-    font-family:'Rubik',500;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 40px;
-}
-.conti div{
-    width: 45%;
-    height: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255,23,68);
-    border-radius: 20px;
-}
-#saved{
-    height: 95%;
-    font-weight: 500;
-    background-color: white;
-    color: rgb(255,23,68);
-    border: 2px solid rgb(255,23,68);
-}
-/*/quantity*/
-.quantity{
-    color:rgb(33,33,33);
-    font-family:Arial, Helvetica, sans-serif;
-}
-.counter {
-    width: 150px;
-    color:rgb(33,33,33);
-    font-family:Arial, Helvetica, sans-serif;
-    /* margin: auto;
-    mar */
-    margin-left: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.counter input {
-    width: 40px;
-    border: 0;
-    line-height: 20px;
+.left input::placeholder{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
-    text-align: center;
-    /* background: gray; */
-    border-radius: 8px;
-    color:black;
-    appearance: none;
-    outline: 0;
+    color: rgba(0,0,0,.5);
 }
-
-.counter span {
-    display: block;
-    font-size: 25px;
-    padding: 0 10px;
+.left input:focus{
+    outline: none;
+}
+.addr input{
+    height: 100px;
+    width: 95%;
+}
+.ph-no{
+    width: 95%;
+}
+.address-bar{
+    width: 93.5%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.add{
+    font-size: 20px;
+    padding-left: 10px;
+    font-weight: 500;
+}
+.clear{
     cursor: pointer;
+    text-decoration: underline;
     color: gray;
-    user-select: none;
+    font-size: 14px;
+}
+.check{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+#home{
+    margin-left: 20px;
+}
+#home:checked{
+  outline: none;
+  transform: scale(1.2);
+}
+label{
+    margin-right: 50px;
+}
+.checkout{
+    cursor: pointer;
+}
+.c{
+    margin-top: -20px;
 }
