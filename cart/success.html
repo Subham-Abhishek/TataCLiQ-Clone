@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="/cart/success.css">
 </head>
 <body>
-    <div class="than" style="background-image: url(icons/please-wait.gif);"></div>
-    <div class="thank" style="background-image: url(icons/succes.gif);"></div>
-    <div class="thanks" style="background-image: url(icons/thankyou.gif);"></div>
+    <div class="than"></div>
+    <div class="thank"></div>
+    <div class="thanks"></div>
 </body>
 <script>
   setTimeout(() => {
@@ -23,6 +23,9 @@
       document.querySelector('.thank').style.display = "none"
       document.querySelector('.thanks').style.display = "block"
   }, 4000);
+  setTimeout(() => {
+      window.location.href="../index.html"
+  }, 6000);
 
 </script>
 </html>
