@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful</title>
+    <link rel="icon" href="unnamed.png" type="png">
+    <link rel="stylesheet" href="/cart/success.css">
+</head>
+<body>
+    <div class="than" style="background-image: url(icons/please-wait.gif);"></div>
+    <div class="thank" style="background-image: url(icons/succes.gif);"></div>
+    <div class="thanks" style="background-image: url(icons/thankyou.gif);"></div>
+</body>
+<script>
+  setTimeout(() => {
+      document.querySelector('.than').style.display = "none"
+      document.querySelector('.thank').style.display = "block"
+
+  }, 2000);
+  setTimeout(() => {
+      document.querySelector('.thank').style.display = "none"
+      document.querySelector('.thanks').style.display = "block"
+  }, 4000);
+
+</script>
+</html>

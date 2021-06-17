@@ -8,6 +8,19 @@ document.querySelector('#f2').innerHTML = priceobj.dvalue
 
 
 function send(){
+    var id = 0;
+    var inputs =  document.querySelectorAll('input')
+    for(var i=0 ; i < inputs.length; i++){
+       if(inputs[i].value.trim() == ""){
+           alert("Please fill all the Details")
+           id++;
+           break;
+       }
+       
+       
+    }
+
+   if(id==0){
     var address = {
         addresss: document.querySelector('.adde').value,
         city: document.querySelector('.city').value,
@@ -17,4 +30,5 @@ function send(){
      }
      localStorage.setItem('address',JSON.stringify(address))
      window.location.href = "payment.html"
+    }
 }

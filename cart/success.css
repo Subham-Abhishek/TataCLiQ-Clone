@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+}
+
+.than{
+    /* position: absolute; */
+    /* z-index: 10; */
+    width: 100%;
+    display:block;
+    height: 100vh;
+   background-position: center;
+   background-repeat: no-repeat; 
+   background-size: 20 10;
+}
+
+.thank{
+    /* position: absolute; */
+    /* z-index: 10; */
+    width: 100%;
+    display:none;
+    height: 100vh;
+   background-position: center;
+   background-repeat: no-repeat; 
+   background-size: 20 10;
+}
+
+.thanks{
+    /* position: absolute; */
+    /* z-index: 20; */
+    width: 100%;
+    display:none;
+    height: 100vh;
+   background-position: center;
+   background-repeat: no-repeat; 
+   background-size: 20 10;
+}

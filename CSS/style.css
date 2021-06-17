@@ -545,6 +545,7 @@ a>img{
     background-color: white;
     transition: 200ms ease-in-out;
 }
+
  @media only screen and (max-width: 990px) {
     .logo.reduce{
         padding: 0;
