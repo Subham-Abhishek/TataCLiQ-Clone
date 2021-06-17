@@ -676,3 +676,22 @@ function logout() {
   localStorage.removeItem("loginData");
   location.reload();
 }
+
+//mobile nav
+var count  = 0;
+document.querySelector('.ham').addEventListener('click',function(){
+    if(count%2==0){
+        document.querySelector('.mob-nav').style.opacity = 1
+    document.querySelector('.header').style.height = '280'+'px'
+    }
+    else{
+        document.querySelector('.mob-nav').style.opacity = 0 
+    document.querySelector('.header').style.height = '60'+'px'
+    }
+    count++
+})
+
+window.addEventListener("resize", changequery);
+function changequery() {
+  location.reload()
+}

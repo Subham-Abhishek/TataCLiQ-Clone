@@ -315,12 +315,7 @@ document.querySelector('.ham').addEventListener('click',function(){
     count++
 })
 
-
-// const mediaQuery = window.matchMedia('(min-width: 100px)')
-// // Check if the media query is true
-// if (mediaQuery.matches) {
-//     document.querySelector('.header').style.height = '100'+'px'
-
-//   // Then trigger an alert
-  
-// }
+window.addEventListener("resize", changequery);
+function changequery() {
+  location.reload();
+}

@@ -1,23 +1,3 @@
-var size = "";
-function btn1() {
-  size = document.getElementById("sizebtn1").innerText;
-}
-function btn2() {
-  size = document.getElementById("sizebtn2").innerText;
-}
-function btn3() {
-  size = document.getElementById("sizebtn3").innerText;
-}
-function btn4() {
-  size = document.getElementById("sizebtn4").innerText;
-}
-function btn5() {
-  size = document.getElementById("sizebtn5").innerText;
-}
-function btn6() {
-  size = document.getElementById("sizebtn6").innerText;
-}
-
 let selectedProduct = localStorage.getItem("selectedProduct");
 selectedProduct = JSON.parse(selectedProduct);
 console.log(selectedProduct[0]);
@@ -163,13 +143,29 @@ span[0].onclick = function () {
   }
 };
 
+//Size Guide Chart Start
+function sizeGuide() {
+  let sizeGuide = document.querySelector(".size-guide");
+  sizeGuide.style.display = "block";
+  sizeGuide.style.filter = "brightness(80%)"
+}
+
+function removeSize() {
+  let sizeGuide = document.querySelector(".size-guide");
+  sizeGuide.style.display = "none";
+}
+//Size Guide Chart Start End
+
+
 let buyNow = document.getElementById("buy_now");
 let addToBag = document.getElementById("add_to_bag");
 let goToBag = document.getElementById("go_to_bag");
 
 //Number of Products in cart
 var bagItem = localStorage.getItem("bagItem");
-if (bagItem == null) {
+let loggedIn = localStorage.getItem("loginData");
+if (JSON.parse(bagItem).length == 0) {
+  document.querySelector(".numb").style.display = "none";
 } else {
   document.querySelector(".numb").style.display = "flex";
   bagItem = JSON.parse(bagItem);
@@ -186,6 +182,28 @@ function scrollsimilar() {
     y = y + 200; //if you want to increase speed simply increase increment interval
   }, t);
 }
+
+//Size Required
+var size = "";
+function btn1() {
+  size = document.getElementById("sizebtn1").innerText;
+}
+function btn2() {
+  size = document.getElementById("sizebtn2").innerText;
+}
+function btn3() {
+  size = document.getElementById("sizebtn3").innerText;
+}
+function btn4() {
+  size = document.getElementById("sizebtn4").innerText;
+}
+function btn5() {
+  size = document.getElementById("sizebtn5").innerText;
+}
+function btn6() {
+  size = document.getElementById("sizebtn6").innerText;
+}
+
 
 //Buy Now
 
@@ -219,8 +237,8 @@ buyNow.onclick = function(){
       selectedProduct[0].size = size;
       bagItem.push(selectedProduct[0]);
       localStorage.setItem("bagItem", JSON.stringify(bagItem));
-
-      window.open("prodPage","_blank");
+      window.open("cart/cart.html","_blank");
+      location.reload()
     }
   } 
 }
@@ -246,7 +264,6 @@ addToBag.onclick = function(){
   }
   if(id == 1){
     if(size == ""){
-      // alert("Please Select Size First")
       let sizeAlert = document.getElementById("size-alert");
       let sizeButtons = document.getElementById("size_selection")
       sizeButtons.style.border = "1px solid #ffcfcf";
@@ -262,17 +279,22 @@ addToBag.onclick = function(){
       selectedProduct[0].size = size;
       bagItem.push(selectedProduct[0]);
       localStorage.setItem("bagItem", JSON.stringify(bagItem));
-
       addToBag.style.display = "none";
       goToBag.style.display = "block";
+      location.reload()
     }
-  } 
+  }
+  if(id == 0){
+    addToBag.style.display = "none";
+    goToBag.style.display = "block";
+  }
 }
 
 //Go To Bag 
 
 goToBag.onclick = function(){
-  window.open("prodPage.html", "_blank");
+  window.open("cart/cart.html", "_blank");
+  location.reload()
 }
 
 
@@ -519,4 +541,23 @@ if (loginData == null) {
 function logout() {
   localStorage.removeItem("loginData");
   location.reload();
+}
+
+//mobile nav
+var count  = 0;
+document.querySelector('.ham').addEventListener('click',function(){
+    if(count%2==0){
+        document.querySelector('.mob-nav').style.opacity = 1
+    document.querySelector('.header').style.height = '280'+'px'
+    }
+    else{
+        document.querySelector('.mob-nav').style.opacity = 0 
+    document.querySelector('.header').style.height = '60'+'px'
+    }
+    count++
+})
+
+window.addEventListener("resize", changequery);
+function changequery() {
+  location.reload()
 }

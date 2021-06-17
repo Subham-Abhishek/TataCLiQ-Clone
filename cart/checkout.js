@@ -18,3 +18,6 @@ function send(){
      localStorage.setItem('address',JSON.stringify(address))
      window.location.href = "payment.html"
 }
+
+let loggedIn = JSON.parse(localStorage.getItem("loginData"));
+document.querySelector(".UserName").textContent = loggedIn[0].name;
