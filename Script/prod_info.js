@@ -176,7 +176,18 @@ if (bagItem == null) {
   document.querySelector(".numb").innerHTML = bagItem.length;
 }
 
+//Scroll to Similar
+function scrollsimilar() {
+  var y = 200; //y-axis pixel displacement
+  var t = 700; //delay in milliseconds
 
+  setTimeout(function () {
+    window.scroll(0, 1400);
+    y = y + 200; //if you want to increase speed simply increase increment interval
+  }, t);
+}
+
+//Buy Now
 
 buyNow.onclick = function(){
   let id=1;
@@ -193,7 +204,17 @@ buyNow.onclick = function(){
   }
   if (id == 1) {
     if (size == "") {
-      alert("Please Select Size First");
+      // alert("Please Select Size First");
+      let sizeAlert = document.getElementById("size-alert");
+      let sizeButtons = document.getElementById("size_selection");
+      sizeButtons.style.border = "1px solid #ffcfcf";
+      sizeButtons.style.padding = "15px";
+      sizeButtons.style.backgroundColor = "#fff7f7";
+      sizeButtons.style.borderRadius = "5px";
+      setTimeout(() => {
+        sizeAlert.style.display = "none";
+      }, 1000);
+      sizeAlert.style.display = "block";
     } else {
       selectedProduct[0].size = size;
       bagItem.push(selectedProduct[0]);
@@ -225,7 +246,17 @@ addToBag.onclick = function(){
   }
   if(id == 1){
     if(size == ""){
-      alert("Please Select Size First")
+      // alert("Please Select Size First")
+      let sizeAlert = document.getElementById("size-alert");
+      let sizeButtons = document.getElementById("size_selection")
+      sizeButtons.style.border = "1px solid #ffcfcf";
+      sizeButtons.style.padding = "15px";
+      sizeButtons.style.backgroundColor = "#fff7f7";
+      sizeButtons.style.borderRadius = "5px";
+      setTimeout(() => {
+        sizeAlert.style.display = "none"
+      }, 1000);
+        sizeAlert.style.display = "block";
     }
     else{
       selectedProduct[0].size = size;
@@ -238,7 +269,7 @@ addToBag.onclick = function(){
   } 
 }
 
-//Go To Bag
+//Go To Bag 
 
 goToBag.onclick = function(){
   window.open("prodPage.html", "_blank");

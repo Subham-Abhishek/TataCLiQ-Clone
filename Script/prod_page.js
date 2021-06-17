@@ -329,22 +329,62 @@ json.forEach(function(ele){
     shoes.append(div);
 })
 }
-
 productFilter(shoesJSON);
 
+
+//Update Number of Products Heading Starts
+document.body.onkeydown = function numprod(){
+    let numOfProd = document.getElementById("noOfProd");
+    let noOfProd = document.querySelectorAll("figure");
+    numOfProd.innerText = noOfProd.length + " Products";
+}
+//Update Number of Products Heading Starts
+
+
+//Product Filter Starts
+let idBlack = 0;
 function black_shoes() {
-  let filterChecked = document.querySelectorAll('input[name="color"]:checked');
-  console.log(filterChecked);
-  if (filterChecked[0].value == "Black") {
-    let filteredProduct = shoesJSON.filter(function (a) {
-      return (a.color == "Black");
-    });
-    productFilter(filteredProduct);
+  idBlack++
+  if (idBlack % 2 != 0) {
+    let filterChecked = document.querySelectorAll('input[name="color"]:checked');
+    console.log(filterChecked);
+    if (filterChecked[0].value == "Black") {
+      let filteredProduct = shoesJSON.filter(function (a) {
+        return a.color == "Black";
+      });
+      productFilter(filteredProduct);
+      
+    }
+  } else {
+    productFilter(shoesJSON);
   }
 }
+//Product Filter End
 
 
+//Search Box Start
+var inputKey = "";
+function searchProd(e) {
+  if (e.key.length == 1) {
+    inputKey += e.key;
+    console.log(inputKey);
+    let searchedProduct = shoesJSON.filter(function (s) {
+      return s.description.indexOf(inputKey) > -1;
+    });
+    productFilter(searchedProduct);
+  } else if (e.key.length == 9) {
+    inputKey = inputKey.split("");
+    inputKey.pop();
+    inputKey = inputKey.join("");
+    let searchedProduct = shoesJSON.filter(function (s) {
+      return s.description.indexOf(inputKey) > -1;
+    });
+    productFilter(searchedProduct);
+  }
+}
+//Search Box End
 
+//Product Sorting Start
 let selectedField = document.getElementById("selectedField");
 let selectedText = document.getElementById("selectedText");
 let options = document.getElementsByClassName("options");
@@ -361,6 +401,7 @@ for (element of options) {
   };
 }
 
+//Popularity
 options[0].onclick = function() {
   shoesJSON = shoesJSON.sort(function(a,b) {
     return b.rating - a.rating;
@@ -370,6 +411,7 @@ options[0].onclick = function() {
   list.classList.toggle("hideList");
 }
 
+//Price Low TO High
 options[1].onclick = function () {
   shoesJSON = shoesJSON.sort(function (a, b) {
     return a.discounted_price - b.discounted_price;
@@ -379,6 +421,7 @@ options[1].onclick = function () {
   list.classList.toggle("hideList");
 };
 
+//Price High to Low
 options[2].onclick = function () {
   shoesJSON = shoesJSON.sort(function (a, b) {
     return b.discounted_price - a.discounted_price;
@@ -387,11 +430,10 @@ options[2].onclick = function () {
   selectedText.innerHTML = this.textContent;
   list.classList.toggle("hideList");
 };
-
+//Product Sorting End
 
 
 //Navbar and Login Signup
-
 
 window.addEventListener("scroll", function () {
   var navbar = document.querySelector(".header");

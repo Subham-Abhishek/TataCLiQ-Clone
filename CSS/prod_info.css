@@ -1044,6 +1044,21 @@ form input {
     left: 14px;
     cursor: pointer;
 }
+/* Size Alert Box */
+#size-alert{
+    display: none;
+    background-color: rgb(0 0 0 / 60%);
+    color: white;
+    width: 300px;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    border-radius: 40px;
+    position: absolute;
+    left: 35%;
+    top: 80%;
+}
+
 #shopbtn{
     display: flex;
 }
@@ -1094,19 +1109,20 @@ form input {
     width: 45px;
     height: 30px;
     margin-right: 15px;
-    background: url(https://www.tatacliq.com/src/general/components/img/deliveryIcon.8066fe78f20f.svg);
+    background: url(https://image.shutterstock.com/image-vector/fast-shipping-delivery-truck-flat-260nw-353170508.jpg);
     background-size: cover;
 }
 #payment{
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 #payment div:first-child{
     width: 45px;
     height: 30px;
     margin-right: 15px;
-    background: url(https://www.tatacliq.com/src/general/components/img/cod.9359a21bd78a.svg);
-    background-size: contain;
+    background: url(https://cdn3.iconfinder.com/data/icons/ecommerce-41/128/Ecommerce-40-512.png);
+    background-size: cover;
 }
 #payment_details {
     line-height: 6px;
