@@ -315,12 +315,29 @@ document.querySelector('.ham').addEventListener('click',function(){
     count++
 })
 
-
-// const mediaQuery = window.matchMedia('(min-width: 100px)')
-// // Check if the media query is true
-// if (mediaQuery.matches) {
-//     document.querySelector('.header').style.height = '100'+'px'
-
-//   // Then trigger an alert
-  
-// }
+var counter = 1;
+setInterval(function(){
+  document.getElementById('radio' + counter).checked = true;
+  counter++;
+  if(counter > 4){
+    counter = 1;
+  }
+}, 4000);
+let le = 1;
+function nex() {
+    document.getElementById('radio' + le).checked = true; 
+    le++;
+    if(le > 4){
+       le = 1;
+      }
+}
+function pre() {
+    le--;
+    if(le<1){
+        le=4
+    }
+    document.getElementById('radio' + le).checked = true; 
+    if(le < 1){
+       le = 4;
+      }
+}

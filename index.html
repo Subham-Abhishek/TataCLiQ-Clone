@@ -8,10 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
     <title>Online Shopping Site for Lifestyle</title>
     <link rel="icon" href="cart/unnamed.png" type="png">
-    <!-- --------- Owl-Carousel ------------------->
-    <!-- --------- bootstrap carousel------------------->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
@@ -1053,7 +1049,7 @@
         <div class="account" onclick="ope()">
           <img src="icons/cliqCash.89de362374b9.svg" alt="..." style="width: 15px; margin-left: 5px;" >CLiQ Cash
         </div>
-        <div class="account logout" onclick="logout()">
+        <div class="logout" onclick="logout()">
           <i class="fas fa-sign-out-alt" style="width: 20px;height: 20px; margin-left: 5px;margin-right: 4px;"></i>Log Out
         </div>
       </div>
@@ -1061,47 +1057,31 @@
     <!-- --------- Nav Bar Ends ------------------->
 
             <!--  Carousel Starts   -->
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-              <a href="#">
-               <img src="images/home page/top -carousel (1).jpg" class="d-block w-100" alt="...">
-              </a>
-          </div>
-          <div class="carousel-item">
-              <a href="">
-               <img src="images/home page/top -carousel (2).jpg" class="d-block w-100" alt="...">
-              </a>
-          </div>
-          <div class="carousel-item">
-              <a href="">
-               <img src="images/home page/top -carousel (3).jpg" class="d-block w-100" alt="...">
-              </a>
-          </div>
-          <div class="carousel-item">
-              <a href="">
-               <img src="images/home page/top -carousel (4).jpg" class="d-block w-100" alt="...">
-              </a>
-          </div>
-          <div class="carousel-item">
-              <a href="">
-               <img src="images/home page/top -carousel (5).jpg" class="d-block w-100" alt="...">
-              </a>
-          </div>
-          <!-- <div class="carousel-item">
-              <a href="">
-               <img src="images/home page/top -carousel (5).jpg" class="d-block w-100" alt="...">
-              </a>
-          </div> -->
+    <!--image slider start-->
+    <div class="slider">
+      <div class="slides">
+        <div class="pre" onclick="pre()"></div>
+        <div class="nex" onclick="nex()"></div>
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+          <img src="/images/home page/top -carousel (1).jpg" alt="">
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="slide">
+          <img src="/images/home page/top -carousel (2).jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="/images/home page/top -carousel (3).jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="/images/home page/top -carousel (4).jpg" alt="">
+        </div>
+      </div>
     </div>
             <!--  Carousel Ends   -->
                             

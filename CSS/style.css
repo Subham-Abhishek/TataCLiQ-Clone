@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
 body{
+    margin: 0;
     background-color: rgb(236,236,236);
     min-height: 100vh;
     font-family: 'Rubik';
@@ -31,7 +32,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header .logo{
-padding-left:6%;
+/* padding-left:6%; */
 width: 19.5%;
 height: 100%;
 display: flex;
@@ -43,10 +44,11 @@ padding-bottom: 3.5vh;
     transition: 200ms ease-in-out;
     padding-top: 1.9vh;
     padding-bottom: 1.5vh;
-    padding-left: 14vh;
+    /* padding-left: 14vh; */
 }
 .logo img{
-    width: 45%;
+    margin-left: 50px;
+    width: 30%;
     height: 3.5vw;
 }
 .nav-right{
@@ -96,13 +98,21 @@ a, a:hover, a:focus, a:active {
     padding-left: 30px;
 }
 .logout{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+    height: 25px;
+    cursor: pointer;
+    font-size: 15px;
     display: none;
     cursor: pointer;
 }
 .speech-bubble {
 	position: absolute;
     width: 180px;
-    height: 20rem;
+    height: 22rem;
     top: 33px;
     right: 80px;
 	background: #fff;
@@ -172,6 +182,9 @@ opacity: 0;
 .account{
  width: 100%;
  padding: 20px;
+ display: flex;
+ align-items: center;
+ padding-bottom: 0;
  height: 25px;
  cursor: pointer;
  font-size: 15px;
@@ -453,7 +466,6 @@ a>img{
     width: 90%;
     margin: auto;
     margin-top:  1%;
-    border: 1px solid;
     margin-bottom: 4.5%;
 }
 .banner img{
@@ -476,7 +488,6 @@ a>img{
     width: 80%;
     margin: auto;
     margin-bottom: 40px;
-    border: 1px solid;
 }
 .new> a > img{
    width: 100%;
@@ -506,11 +517,8 @@ a>img{
     border-radius: 5px;
 }
 /*cloth brands style end */
-/* rotating banner carousel*/
-.slide{
-    height: 27.5vw;
-    /* border: 1px solid;   */
- }
+
+
  .mob-nav{
      display: none;
  }
@@ -630,7 +638,7 @@ a>img{
                 0 10px 10px rgba(0,0,0,0.22);
         position:static !important;
         overflow: hidden;
-        width: 40vw !important;
+        width: 40vw  ;
         left: 20%;
         top: 20%;
         max-width: 100%;
@@ -726,6 +734,7 @@ a>img{
         text-align: center;
         top: 0;
         height: 100%;
+     
         width: 50%;
         transform: translateX(0);
         transition: transform 0.6s ease-in-out;
@@ -1341,7 +1350,7 @@ form input {
 	text-align: center;
 	top: 0;
 	height: 100%;
-	width: 50%;
+	width: 40%;
 	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
@@ -1470,3 +1479,89 @@ img:hover{
     transform: scale(1.02);
     transition: 250ms ease-in-out;
 }
+
+/* rotating banner carousel*/
+
+.slider{
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+  }
+  
+  .slides{
+
+    width: 500%;
+    height: 450px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 500ms;
+  }
+  .slide img:hover{
+      transform: none !important;
+  }
+  .slide img{
+    width: 100%;
+    height: 450px;
+  }
+
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+ 
+ .nex{
+     position: absolute;
+     border-radius: 50%;
+     width: 70px;
+     opacity: .7;
+     height: 70px;
+     cursor: pointer;
+    top: 150px;
+     background-color: #d8d8d8;
+     background-image: url(/icons/arrowcarousel.svg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 30px 30px;
+     right: 10px;
+ }
+ .pre{
+    position: absolute;
+    border-radius: 50%;
+    width: 70px;
+    cursor: pointer;
+    top: 150px;
+    opacity: .7;
+    height: 70px;
+    background-color: #d8d8d8;
+    background-image: url(/icons/arrowcarousel.svg);
+    transform: rotate(180deg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    left: 10px;
+}
+
+
+/* rotating banner carousel*/
