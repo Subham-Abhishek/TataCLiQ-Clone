@@ -417,42 +417,11 @@ opacity: 0;
     background-color: red;
 }
 /* nav ends*/
-.carousel{
-    width: 100%;
-  cursor: pointer;
-}
-.carousel-control-prev{
-    width: 66px;
-    height: 66px;
-    top: 40%;
-    left: 20px;
-    opacity: .5;
-    border-radius: 50%;
-    background-color: rgb(216, 216, 216)
-}
-.carousel-control-prev-icon{
-   transform: rotate(180deg);
-   background-image:url(../icons/arrowcarousel.svg);
-}
-a>img{
-    transform: none !important;
-}
-.carousel-control-next{
-    width: 66px;
-    height: 66px;
-    top: 40%;
-    right: 20px;
-    opacity: .5;
-    border-radius: 50%;
-    background-color: rgb(216, 216, 216)
-}
-.carousel-control-next-icon{
-    background-image:url(../icons/arrowcarousel.svg);
-}
-
 .yesBankBanner{
     width: 100%;
     height: 12vw;
+
+    /* z-index: 1000; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -464,6 +433,7 @@ a>img{
 }
 .banner{
     width: 90%;
+   
     margin: auto;
     margin-top:  1%;
     margin-bottom: 4.5%;
@@ -499,7 +469,7 @@ a>img{
 }
 /*cloth brands style starts */
 .brands-section{
-    width: 75%;
+    width: 77%;
     height: auto;
     display: flex;
     justify-content: space-evenly;
@@ -508,7 +478,7 @@ a>img{
     margin-bottom: 4.6vw;
 }
 .brands-section > div{
-    width: 250px;
+    width: 240px;
     height: 100%;
     padding: 5px 10px;
 }
@@ -558,7 +528,7 @@ a>img{
     .logo.reduce{
         padding: 0;
         padding-top: 4vh;
-        padding-left: 6%;
+        /* padding-left: 6%; */
        }
        .overlay-panel p {
         font-size: 14px;
@@ -1483,16 +1453,16 @@ img:hover{
 /* rotating banner carousel*/
 
 .slider{
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    height: 450px;
+    /* height: 450px; */
     overflow: hidden;
   }
   
   .slides{
 
     width: 500%;
-    height: 450px;
+    /* height: 450px; */
     display: flex;
   }
   
@@ -1509,7 +1479,7 @@ img:hover{
   }
   .slide img{
     width: 100%;
-    height: 450px;
+    /* height: 450px; */
   }
 
   #radio1:checked ~ .first{
@@ -1538,9 +1508,9 @@ img:hover{
      opacity: .7;
      height: 70px;
      cursor: pointer;
-    top: 150px;
+     top: 250px;
      background-color: #d8d8d8;
-     background-image: url(/icons/arrowcarousel.svg);
+     background-image: url(../icons/arrowcarousel.svg);
      background-position: center;
      background-repeat: no-repeat;
      background-size: 30px 30px;
@@ -1551,11 +1521,11 @@ img:hover{
     border-radius: 50%;
     width: 70px;
     cursor: pointer;
-    top: 150px;
+    top: 250px;
     opacity: .7;
     height: 70px;
     background-color: #d8d8d8;
-    background-image: url(/icons/arrowcarousel.svg);
+    background-image: url(../icons/arrowcarousel.svg);
     transform: rotate(180deg);
     background-position: center;
     background-repeat: no-repeat;

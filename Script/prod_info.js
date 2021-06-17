@@ -160,11 +160,11 @@ function removeSize() {
 let buyNow = document.getElementById("buy_now");
 let addToBag = document.getElementById("add_to_bag");
 let goToBag = document.getElementById("go_to_bag");
-
+console.log(goToBag);
 //Number of Products in cart
 var bagItem = localStorage.getItem("bagItem");
 let loggedIn = localStorage.getItem("loginData");
-if (JSON.parse(bagItem).length == 0) {
+if (  bagItem == null) {
   document.querySelector(".numb").style.display = "none";
 } else {
   document.querySelector(".numb").style.display = "flex";
