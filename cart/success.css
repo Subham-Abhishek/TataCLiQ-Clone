@@ -7,7 +7,7 @@ body{
     /* z-index: 10; */
     width: 100%;
     display:block;
-    background-image: url(please-wait.gif);
+    background-image: url(../icons/please-wait.gif);
     height: 100vh;
    background-position: center;
    background-repeat: no-repeat; 
@@ -18,7 +18,7 @@ body{
     /* position: absolute; */
     /* z-index: 10; */
     width: 100%;
-    background-image: url(succes.gif);
+    background-image: url(../icons/succes.gif);
     display:none;
     height: 100vh;
    background-position: center;
@@ -28,7 +28,7 @@ body{
 
 .thanks{
     /* position: absolute; */
-    background-image: url(thankyou.gif);
+    background-image: url(../icons/thankyou.gif);
     /* z-index: 20; */
     width: 100%;
     display:none;
