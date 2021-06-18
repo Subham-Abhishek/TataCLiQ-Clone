@@ -28,6 +28,9 @@ function send(){
     setTimeout(() => {
         window.location.href = "success.html"
     }, 1500);
+
+    localStorage.removeItem('bagItem')
+
 }
 
 var login = JSON.parse(localStorage.getItem('loginData'))[0]
