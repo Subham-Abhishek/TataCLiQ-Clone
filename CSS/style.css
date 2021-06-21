@@ -35,6 +35,7 @@ body::-webkit-scrollbar-thumb {
 /* padding-left:6%; */
 width: 19.5%;
 height: 100%;
+cursor: pointer;
 display: flex;
 padding-top: 4vh;
 padding-bottom: 3.5vh;
@@ -525,6 +526,9 @@ opacity: 0;
 }
 
  @media only screen and (max-width: 990px) {
+     .pre,.nex{
+         display: none;
+     }
     .logo.reduce{
         padding: 0;
         padding-top: 4vh;
