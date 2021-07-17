@@ -113,7 +113,7 @@ a, a:hover, a:focus, a:active {
 .speech-bubble {
 	position: absolute;
     width: 180px;
-    height: 22rem;
+    height: 70px;
     top: 33px;
     right: 80px;
 	background: #fff;
@@ -817,6 +817,25 @@ opacity: 0;
         width: 60px;
         height: 40px;
     }
+ 
+    .trust-logo{
+        width: 20px !important;
+        margin-left: 10px;
+    }
+    .trust-text{
+        
+        font-size: 10px !important;
+    }
+    .downloadApp{
+        width: 200px !important;
+        margin-left: 15px;
+    }
+    .copy-right-text{
+        display: none !important;
+    }
+    .link-holder{
+        margin-left: 15px;
+    }
 }
 
 /* dropdown*/
@@ -976,21 +995,22 @@ section div{
     height: auto;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     line-height: 120px;
 }
 .trust-component{
     width: 25%;
     height: auto;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: flex-start;
-    align-items: center;
+    /* align-items: center; */
 
 }
 .trust-logo{
-    width: 35px;
-    height: 35px;
+   margin-top: 50px;
+    width: 12%;
+    height: 2rem;
 }
 .icon-image{
     width: 100%;
@@ -1434,6 +1454,7 @@ main{
     min-width: 250px;
     position: relative;
     left: 0;
+    cursor: pointer;
     text-align: center;
     transition: 0.5s;
 }
@@ -1476,6 +1497,7 @@ img:hover{
   
   .slide{
     width: 20%;
+    cursor: pointer;
     transition: 500ms;
   }
   .slide img:hover{

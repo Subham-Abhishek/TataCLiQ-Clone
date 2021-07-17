@@ -322,7 +322,7 @@ setInterval(function(){
   if(counter > 4){
     counter = 1;
   }
-}, 4000);
+}, 2000);
 let le = 1;
 function nex() {
     document.getElementById('radio' + le).checked = true; 

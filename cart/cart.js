@@ -62,8 +62,7 @@ else{
           <div class="line"></div>
           
             <div class="whist">
-              <img src="icons/whist.svg" alt="">
-              Save to whistlist
+           
               <p class="remove"  onclick="rem(${i})">Remove</p>
             </div>
           
