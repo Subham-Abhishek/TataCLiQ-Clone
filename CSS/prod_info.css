@@ -1175,7 +1175,6 @@ form input {
     display: flex;
     list-style: none;
     align-items: center;
-    text-overflow: ellipsis;
     margin-left: 51.7%;
     margin-top: 30px;
     color: #afafaf;
@@ -1196,6 +1195,31 @@ form input {
 #breadcrumbs a:hover{
     color:rgb(255, 23,68);
     transition: 300ms ease-out;
+}
+
+@media only screen and (max-width: 800px) {
+  #prod_info{
+    flex-direction: column;
+  }
+  #prod_carousel{
+      width: 100%;
+  }
+  #prod_carousel > img{
+      width: 100%;
+      height: 100%;
+  }
+  #prod_details{
+      width: 100%;
+      margin-left: 0;
+  }
+  #breadcrumbs{
+      position: absolute;
+      left: -170px;
+  }
+  #similar_prod_heading{
+      font-size: 20px;
+      margin-left: -50px;
+  }
 }
 
 #brand{
@@ -1417,11 +1441,21 @@ form input {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   cursor: pointer;
-  padding: 18px;
   width: 100%;
   border: none;
   text-align: left;
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.asdfg{
+  width: 750px;
+  padding: 18px;
+}
+.asdf{
+    transition: 300ms;
 }
 
 .content {
@@ -1429,7 +1463,7 @@ form input {
   background-color: white;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.3s ease-out;
 }
 
 main{

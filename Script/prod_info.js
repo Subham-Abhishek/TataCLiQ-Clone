@@ -52,7 +52,6 @@ smallImg[4].addEventListener("click", function () {
 });
 
 var coll = document.getElementsByClassName("collapsible");
-var i;
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function () {
     if (this.style.fontWeight) {
@@ -67,6 +66,19 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     }
   });
+}
+
+var asd = document.getElementsByClassName("asdfg");
+var asdf = document.getElementsByClassName("asdf");
+for(let i = 0; i < asd.length; i++){
+  asd[i].addEventListener("click", function (){
+    if(asdf[i].style.transform) {
+      asdf[i].style.transform = null
+    }
+    else{
+      asdf[i].style.transform = "rotate(-180Deg)";
+    }
+  })
 }
 
 let span = document.getElementsByClassName("scroller");
