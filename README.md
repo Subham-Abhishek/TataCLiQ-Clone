@@ -56,7 +56,7 @@ To run, follow these steps:
 - Google Fonts
 - Font Awesome
 
- © [Abhishek Singh ](https://github.com/singhabhishek6)
+## Creators
 
 
 - [@Abhishek-Singh](https://github.com/singhabhishek6)
