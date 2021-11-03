@@ -40,7 +40,7 @@ Want to run in your local Machine? Great!
 To run, follow these steps:
 
 - Clone my repository `https://github.com/Subham-Abhishek/TataCLiQ-Clone.git`
-- Install packages `npm install`
+- Install packages `npm install / yarn`
 - Run the app `npm start / yarn start`
 
 
